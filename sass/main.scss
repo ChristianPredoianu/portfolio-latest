@@ -6,17 +6,29 @@
 .hero {
   background-color: var(--clr-bg-light);
   min-height: 90vh;
+
+  &__down-arrow {
+    width: 100%;
+    font-size: 5rem;
+    text-align: center;
+    cursor: pointer;
+
+    @include respond(sm) {
+      width: auto;
+      text-align: left;
+    }
+  }
 }
 
 .social-media {
-  @include flex-config($justify: center, $align: end);
+  @include flex-config($justify: end, $align: center);
   gap: 2rem;
   font-size: 3rem;
   padding: 5rem 0;
 
-  @include respond(md) {
+  /*   @include respond(md) {
     flex-direction: column;
-  }
+  } */
 
   &--linkedin {
     color: #0072b1;
@@ -28,7 +40,7 @@
 }
 
 .presentation {
-  @include flex-config($direction: column-reverse);
+  @include flex-config($direction: column);
 
   @include respond(sm) {
     @include flex-config(
@@ -40,12 +52,6 @@
 }
 
 .hero-content-left {
-  @include respond(sm) {
-    width: 30%;
-  }
-}
-
-.hero-content-right {
   @include flex-config($direction: column, $align: center);
 
   @include respond(sm) {
@@ -57,7 +63,7 @@
   }
 }
 
-.hero-content-right-cta {
+.hero-content-left-cta {
   padding: 2rem 0;
 
   @include respond(sm) {
@@ -91,7 +97,7 @@
   }
 }
 
-.hero-content-right-icons {
+.hero-content-left-icons {
   @include flex-config($justify: space-between, $align: center);
   width: 100%;
   font-size: clamp(2.5rem, 2vw, 4em);
@@ -152,5 +158,11 @@
     &--sass {
       color: #e46076;
     }
+  }
+}
+
+.hero-content-right {
+  @include respond(sm) {
+    width: 30%;
   }
 }

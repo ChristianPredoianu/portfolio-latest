@@ -16,6 +16,38 @@
   text-align: center;
 }
 
+.icons-wrapper {
+  @include flex-config($direction: column);
+  gap: 2rem;
+}
+
+.icon-wrapper {
+  &__icon {
+    font-size: 3rem;
+
+    &--nuxt {
+      color: #008000;
+    }
+
+    &--es6 {
+      color: #cccc0d;
+    }
+
+    &--npm {
+      color: #ff0000;
+    }
+
+    &--tailwind {
+      color: #3492eb;
+    }
+  }
+
+  &__description {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+
 .swiper-slide img {
   object-fit: scale-down;
 }
