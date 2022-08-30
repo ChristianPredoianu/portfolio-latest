@@ -21,6 +21,12 @@
   gap: 2rem;
 }
 
+.swiper-slide img {
+  object-fit: scale-down;
+  filter: grayscale(40%);
+  border-radius: 7%;
+}
+
 .icon-wrapper {
   &__icon {
     font-size: 3rem;
@@ -46,8 +52,4 @@
     margin-top: 0.5rem;
     font-size: 1.2rem;
   }
-}
-
-.swiper-slide img {
-  object-fit: scale-down;
 }
