@@ -12,8 +12,10 @@
     font-size: 5rem;
     text-align: center;
     cursor: pointer;
+    display: none !important;
 
     @include respond(sm) {
+      display: block !important;
       width: auto;
       text-align: left;
     }
