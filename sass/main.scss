@@ -1,3 +1,156 @@
+@use './abstracts/' as *;
 @use './base/' as *;
 @use './utilities/' as *;
 @use './components/' as *;
+
+.hero {
+  background-color: var(--clr-bg-light);
+  min-height: 90vh;
+}
+
+.social-media {
+  @include flex-config($justify: center, $align: end);
+  gap: 2rem;
+  font-size: 3rem;
+  padding: 5rem 0;
+
+  @include respond(md) {
+    flex-direction: column;
+  }
+
+  &--linkedin {
+    color: #0072b1;
+  }
+
+  &--mail {
+    color: #b67d12;
+  }
+}
+
+.presentation {
+  @include flex-config($direction: column-reverse);
+
+  @include respond(sm) {
+    @include flex-config(
+      $direction: row,
+      $justify: space-between,
+      $align: center
+    );
+  }
+}
+
+.hero-content-left {
+  @include respond(sm) {
+    width: 30%;
+  }
+}
+
+.hero-content-right {
+  @include flex-config($direction: column, $align: center);
+
+  @include respond(sm) {
+    width: 60%;
+  }
+
+  @include respond(md) {
+    width: 50%;
+  }
+}
+
+.hero-content-right-cta {
+  padding: 2rem 0;
+
+  @include respond(sm) {
+    width: 100%;
+  }
+
+  &__primary-heading {
+    font-size: clamp(3rem, 2.5vw, 8rem);
+  }
+
+  &__secondary-heading {
+    font-size: clamp(2rem, 2vw, 3rem);
+    margin-top: 0.5rem;
+    font-weight: 400;
+  }
+
+  &__btn {
+    background-color: transparent;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    border: 1px solid #ffa500;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      transform: translateY(3px);
+      border: 1px solid #5f5f5f;
+    }
+  }
+}
+
+.hero-content-right-icons {
+  @include flex-config($justify: space-between, $align: center);
+  width: 100%;
+  font-size: clamp(2.5rem, 2vw, 4em);
+  padding: 5rem 1rem;
+
+  @include respond(sm) {
+    padding: 5rem 0;
+  }
+
+  &__icon {
+    &--js {
+      color: #cccc0d;
+    }
+
+    &--ts {
+      position: relative;
+      background: #358ef1;
+      width: 22px;
+      height: 25px;
+      border-radius: 1px;
+
+      @include respond(md) {
+        width: 25px;
+        height: 29px;
+      }
+
+      @include respond(lg) {
+        width: 33px;
+        height: 35px;
+      }
+
+      p {
+        position: absolute;
+        color: #fff;
+        font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+        bottom: 0;
+        right: 0.2rem;
+        font-weight: 700;
+      }
+    }
+
+    &--vue {
+      color: #008000;
+    }
+
+    &--react {
+      color: #438cec;
+    }
+
+    &--html {
+      color: #ffa500;
+    }
+
+    &--css {
+      color: #0000ff;
+    }
+
+    &--sass {
+      color: #e46076;
+    }
+  }
+}

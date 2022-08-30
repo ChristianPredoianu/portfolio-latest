@@ -6,15 +6,139 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Christian Predoianu | Front-end developer</title>
   </head>
   <body>
     <!-- <div id="app"></div> -->
-    <h1>fdfs</h1>
+    <header class="header">
+      <nav class="navbar container">
+        <a href="#" class="nav-logo">Christian Predoianu</a>
+
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="#" class="nav-item__link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-item__link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-item__link">About me</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-item__link">Contact</a>
+          </li>
+        </ul>
+
+        <div class="nav-cta">
+          <div class="dm-toggler">
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <label for="checkbox" class="label">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
+          <div class="hamburger">
+            <span class="hamburger__bar"></span>
+            <span class="hamburger__bar"></span>
+            <span class="hamburger__bar"></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="hero container">
+      <div class="social-media">
+        <a
+          href="https://github.com/ChristianPredoianu"
+          rel="noopener noreferrer nofollow"
+          target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/christian-predoianu-369218157/"
+          rel="noopener noreferrer nofollow"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin social-media--linkedin"></i
+        ></a>
+        <a
+          href="mailto:christianpredoianu@yahoo.com"
+          rel="noopener noreferrer nofollow"
+          target="_blank"
+          ><i class="fa-solid fa-envelope social-media--mail"></i
+        ></a>
+      </div>
+      <div class="presentation">
+        <div class="hero-content-left">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  class="swiper-slide__img"
+                  src="./assets/christian-predoianu.png"
+                  alt="Christian Predoianu"
+                />
+              </div>
+              <div class="swiper-slide">Slide 2</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="hero-content-right">
+          <div class="hero-content-right-cta">
+            <h1 class="hero-content-right-cta__primary-heading">
+              Christian Predoianu
+            </h1>
+            <h2 class="hero-content-right-cta__secondary-heading">
+              Front end developer
+            </h2>
+            <button class="hero-content-right-cta__btn">Projects</button>
+          </div>
+          <div class="hero-content-right-icons">
+            <i
+              class="fa-brands fa-js hero-content-right-icons__icon hero-content-right-icons__icon--js"
+            ></i>
+            <div
+              class="hero-content-right-icons__icon hero-content-right-icons__icon--ts"
+            >
+              <p>TS</p>
+            </div>
+            <i
+              class="fa-brands fa-vuejs hero-content-right-icons__icon hero-content-right-icons__icon--vue"
+            ></i>
+            <i
+              class="fa-brands fa-react hero-content-right-icons__icon hero-content-right-icons__icon--react"
+            ></i>
+            <i
+              class="fa-brands fa-html5 hero-content-right-icons__icon hero-content-right-icons__icon--html"
+            ></i>
+            <i
+              class="fa-brands fa-css3 hero-content-right-icons__icon hero-content-right-icons__icon--css"
+            ></i>
+            <i
+              class="fa-brands fa-sass hero-content-right-icons__icon hero-content-right-icons__icon--sass"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://kit.fontawesome.com/ab54ee68f9.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
