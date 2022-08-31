@@ -14,16 +14,19 @@
       rel="stylesheet"
     />
 
+    <link href="./sass/main.scss" rel="stylesheet" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Christian Predoianu | Front-end developer</title>
   </head>
   <body>
     <!-- <div id="app"></div> -->
-    <header class="header container">
-      <nav class="navbar">
+    <!--NAV-->
+    <header class="header">
+      <nav class="navbar container">
         <a href="#" class="nav-logo">Christian Predoianu</a>
 
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
           <li class="nav-item">
             <a href="#" class="nav-item__link">Home</a>
           </li>
@@ -37,17 +40,16 @@
             <a href="#" class="nav-item__link">Contact</a>
           </li>
         </ul>
-
         <div class="nav-cta">
-          <div class="dm-toggler">
-            <input type="checkbox" class="checkbox" id="checkbox" />
+          <div class="dm-toggler" id="dm-toggler">
+            <input type="checkbox" class="checkbox" id="dark-mode-checkbox" />
             <label for="checkbox" class="label">
               <i class="fas fa-moon"></i>
               <i class="fas fa-sun"></i>
               <div class="ball"></div>
             </label>
           </div>
-          <div class="hamburger">
+          <div class="hamburger" id="hamburger">
             <span class="hamburger__bar"></span>
             <span class="hamburger__bar"></span>
             <span class="hamburger__bar"></span>
@@ -55,27 +57,33 @@
         </div>
       </nav>
     </header>
+    <!--NAV END-->
+
+    <!--HERO SECTION-->
     <section class="hero container">
       <div class="social-media">
-        <a
-          href="https://github.com/ChristianPredoianu"
-          rel="noopener noreferrer nofollow"
-          target="_blank"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/christian-predoianu-369218157/"
-          rel="noopener noreferrer nofollow"
-          target="_blank"
-          ><i class="fa-brands fa-linkedin social-media--linkedin"></i
-        ></a>
-        <a
-          href="mailto:christianpredoianu@yahoo.com"
-          rel="noopener noreferrer nofollow"
-          target="_blank"
-          ><i class="fa-solid fa-envelope social-media--mail"></i
-        ></a>
+        <div class="social-media-icons-wrapper">
+          <a
+            href="https://github.com/ChristianPredoianu"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/christian-predoianu-369218157/"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin social-media--linkedin"></i
+          ></a>
+          <a
+            href="mailto:christianpredoianu@yahoo.com"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+            ><i class="fa-solid fa-envelope social-media--mail"></i
+          ></a>
+        </div>
       </div>
+
       <div class="presentation">
         <div class="hero-content-left">
           <div class="hero-content-left-cta">
@@ -87,34 +95,34 @@
             </h2>
             <button class="hero-content-left-cta__btn">Projects</button>
           </div>
-          <div class="hero-content-left-icons">
+          <div class="floating-icons">
             <i
-              class="fa-brands fa-js hero-content-left-icons__icon hero-content-left-icons__icon--js"
+              class="fa-brands fa-js floating-icons__icon floating-icons__icon--js"
             ></i>
-            <div
-              class="hero-content-left-icons__icon hero-content-left-icons__icon--ts"
-            >
+            <div class="floating-icons__icon floating-icons__icon--ts">
               <p>TS</p>
             </div>
             <i
-              class="fa-brands fa-vuejs hero-content-left-icons__icon hero-content-left-icons__icon--vue"
+              class="fa-brands fa-vuejs floating-icons__icon floating-icons__icon--vue"
             ></i>
             <i
-              class="fa-brands fa-react hero-content-left-icons__icon hero-content-left-icons__icon--react"
+              class="fa-brands fa-react floating-icons__icon floating-icons__icon--react"
             ></i>
             <i
-              class="fa-brands fa-html5 hero-content-left-icons__icon hero-content-left-icons__icon--html"
+              class="fa-brands fa-html5 floating-icons__icon floating-icons__icon--html"
             ></i>
             <i
-              class="fa-brands fa-css3 hero-content-left-icons__icon hero-content-left-icons__icon--css"
+              class="fa-brands fa-css3 floating-icons__icon floating-icons__icon--css"
             ></i>
             <i
-              class="fa-brands fa-sass hero-content-left-icons__icon hero-content-left-icons__icon--sass"
+              class="fa-brands fa-sass floating-icons__icon floating-icons__icon--sass"
             ></i>
           </div>
         </div>
+
         <div class="hero-content-right">
-          <div class="swiper mySwiper">
+          <!--SWIPER-->
+          <div class="swiper verticalSwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img
@@ -123,6 +131,7 @@
                   alt="Christian Predoianu"
                 />
               </div>
+              <!--SWIPER SLIDE 1-->
               <div class="swiper-slide">
                 <div class="icons-wrapper">
                   <div class="icon-wrapper">
@@ -147,7 +156,7 @@
                     <i
                       class="fa-brands fa-github icon-wrapper__icon icon-wrapper__icon--github"
                     ></i>
-                    <p class="icon-wrapper__description">Dev Tools</p>
+                    <p class="icon-wrapper__description">Github</p>
                   </div>
                   <div class="icon-wrapper">
                     <i
@@ -157,6 +166,9 @@
                   </div>
                 </div>
               </div>
+              <!--SWIPER SLIDE 1 END-->
+
+              <!--SWIPER SLIDE 2-->
               <div class="swiper-slide">
                 <div class="icons-wrapper">
                   <div class="icon-wrapper">
@@ -173,34 +185,125 @@
                   </div>
                   <div class="icon-wrapper">
                     <i
-                      class="fa-solid fa-screwdriver-wrench icon-wrapper__icon"
+                      class="fa-solid fa-screwdriver-wrench icon-wrapper__icon icon-wrapper__icon--devtools"
                     ></i>
                     <p class="icon-wrapper__description">Dev Tools</p>
                   </div>
                   <div class="icon-wrapper">
                     <i
-                      class="fa-solid fa-wind icon-wrapper__icon icon-wrapper__icon--tailwind"
+                      class="fa-solid fa-mobile icon-wrapper__icon icon-wrapper__icon--responsive"
                     ></i>
-                    <p class="icon-wrapper__description">Tailwind</p>
+                    <p class="icon-wrapper__description">Responsive design</p>
+                  </div>
+                  <div class="icon-wrapper">
+                    <i
+                      class="fa-brands fa-bootstrap icon-wrapper__icon icon-wrapper__icon--bootstrap"
+                    ></i>
+                    <p class="icon-wrapper__description">Bootstrap</p>
                   </div>
                 </div>
               </div>
+              <!--SWIPER SLIDE 2 END-->
+
+              <!--SWIPER SLIDE 3-->
+              <div class="swiper-slide">
+                <div class="icons-wrapper">
+                  <div class="icon-wrapper">
+                    <p class="icon-wrapper__icon icon-wrapper__icon--bem">
+                      BEM
+                    </p>
+                    <p class="icon-wrapper__description">BEM</p>
+                  </div>
+
+                  <div class="icon-wrapper">
+                    <i
+                      class="fa-brands fa-figma icon-wrapper__icon icon-wrapper__icon--figma"
+                    ></i>
+                    <p class="icon-wrapper__description">Figma</p>
+                  </div>
+                  <div class="icon-wrapper">
+                    <i
+                      class="fa-solid fa-terminal icon-wrapper__icon icon-wrapper__icon--terminal"
+                    ></i>
+                    <p class="icon-wrapper__description">Command Line</p>
+                  </div>
+                  <div class="icon-wrapper">
+                    <i
+                      class="fa-solid fa-bolt icon-wrapper__icon icon-wrapper__icon--performance"
+                    ></i>
+                    <p class="icon-wrapper__description">
+                      Performance optimisation
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--SWIPER SLIDE 3 END-->
             </div>
             <div class="swiper-pagination"></div>
           </div>
+          <!--SWIPER END-->
         </div>
       </div>
-      <i class="fa-solid fa-chevron-down hero__down-arrow"></i>
+      <a href="#projects"
+        ><i class="fa-solid fa-chevron-down hero__down-arrow"></i
+      ></a>
     </section>
+    <!--HERO SECTION END-->
 
+    <section class="projects" id="projects">
+      <h3 class="projects__heading">Projects</h3>
+      <div class="swipers">
+        <div class="swiper-container">
+          <h4 class="swiper-container__heading">JavaScript Projects</h4>
+          <div class="swiper swiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide-cube__one--slide1">
+                <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
+              </div>
+              <div class="swiper-slide swiper-slide-cube__one--slide2"></div>
+              <div class="swiper-slide swiper-slide-cube__one--slide3"></div>
+              <div class="swiper-slide swiper-slide-cube__one--slide4"></div>
+              <div class="swiper-slide swiper-slide-cube__one--slide5"></div>
+              <div class="swiper-slide swiper-slide-cube__one--slide6"></div>
+              <div class="swiper-slide swiper-slide-cube__one--slide7"></div>
+              <div class="swiper-slide swiper-slide-cube__one--slide8"></div>
+              <div class="swiper-slide swiper-slide-cube__one--slide9"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+        <div class="swiper-container">
+          <h4 class="swiper-container__heading">HTML/Css Projects</h4>
+          <div class="swiper swiper3">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide-cube__two--slide1"></div>
+              <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script
       src="https://kit.fontawesome.com/ab54ee68f9.js"
       crossorigin="anonymous"
     ></script>
 
+    <script type="module" src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
-    <script type="module" src="js/main.js"></script>
   </body>
 </html>

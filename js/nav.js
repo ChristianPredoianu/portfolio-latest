@@ -1,5 +1,5 @@
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
 const navItemLinks = document.querySelectorAll('.nav-item__link');
 
 hamburger.addEventListener('click', toggleNavLinks);

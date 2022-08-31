@@ -1,0 +1,129 @@
+@use '../abstracts/' as *;
+
+.swiper {
+  width: 100%;
+  height: 50rem;
+}
+
+.swiper2 {
+  width: 25rem;
+  height: 25rem;
+
+  @include respond(sm) {
+    width: 40rem;
+    height: 40rem;
+  }
+
+  @include respond(lg) {
+    width: 50rem;
+    height: 50rem;
+  }
+}
+
+.swiper3 {
+  width: 25rem;
+  height: 25rem;
+
+  @include respond(sm) {
+    width: 40rem;
+    height: 40rem;
+  }
+
+  @include respond(lg) {
+    width: 50rem;
+    height: 50rem;
+  }
+}
+
+.swiper-slide {
+  @include flex-config($justify: center, $align: center);
+  background: var(--clr-bg-light);
+  font-size: 18px;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide-cube {
+  &__one {
+    &--slide1 {
+      background-image: url('../../assets/portfolio.jpg');
+    }
+
+    &--slide2 {
+      background-image: url('../../assets/shop.jpg');
+    }
+
+    &--slide3 {
+      background-image: url('../../assets/netflix.jpg');
+    }
+
+    &--slide4 {
+      background-image: url('../../assets/crypto.jpg');
+    }
+
+    &--slide5 {
+      background-image: url('../../assets/restaurant.jpg');
+    }
+
+    &--slide6 {
+      background-image: url('../../assets/space-station.jpg');
+    }
+
+    &--slide7 {
+      background-image: url('../../assets/quiz.jpg');
+    }
+
+    &--slide8 {
+      background-image: url('../../assets/shoe-shop.jpg');
+    }
+
+    &--slide9 {
+      background-image: url('../../assets/covid.jpg');
+    }
+  }
+
+  &__two {
+    &--slide1 {
+      background-image: url('../../assets/paulina.jpg');
+    }
+  }
+}
+
+.icons-wrapper {
+  @include flex-config($direction: column);
+  gap: 2rem;
+}
+
+.swiper-slide img {
+  object-fit: scale-down;
+  filter: grayscale(40%);
+  border-radius: 7%;
+}
+
+.icon-wrapper {
+  &__icon {
+    font-size: 3rem;
+
+    &--nuxt {
+      color: #008000;
+    }
+
+    &--es6 {
+      color: #cccc0d;
+    }
+
+    &--npm {
+      color: #ff0000;
+    }
+
+    &--tailwind {
+      color: #3492eb;
+    }
+  }
+
+  &__description {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+}

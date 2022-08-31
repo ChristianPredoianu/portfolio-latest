@@ -1,36 +1,43 @@
 @use './abstracts/' as *;
 @use './base/' as *;
 @use './utilities/' as *;
+@use './layouts/' as *;
 @use './components/' as *;
 
+.swiper-container {
+  width: 300px;
+  height: 300px;
+  margin: 40px auto;
+}
+
 .hero {
-  background-color: var(--clr-bg-light);
   min-height: 90vh;
 
   &__down-arrow {
     width: 100%;
     font-size: 5rem;
+    color: var(--clr-arrow);
     text-align: center;
     cursor: pointer;
     display: none !important;
+    transition: all 0.2s ease;
 
     @include respond(sm) {
-      display: block !important;
+      display: inline-block !important;
       width: auto;
       text-align: left;
+    }
+
+    &:hover {
+      transform: translateY(5px) scale(0.9);
     }
   }
 }
 
 .social-media {
   @include flex-config($justify: end, $align: center);
-  gap: 2rem;
   font-size: 3rem;
   padding: 5rem 0;
-
-  /*   @include respond(md) {
-    flex-direction: column;
-  } */
 
   &--linkedin {
     color: #0072b1;
@@ -39,6 +46,11 @@
   &--mail {
     color: #b67d12;
   }
+}
+
+.social-media-icons-wrapper {
+  background-color: var(--clr-wrapper);
+  padding: 2rem;
 }
 
 .presentation {
@@ -83,82 +95,18 @@
   }
 
   &__btn {
-    background-color: transparent;
+    background-color: var(--clr-btn);
+    color: var(--foreground);
     margin-top: 1.5rem;
     padding: 1rem 2rem;
     font-size: clamp(1.5rem, 2vw, 2.5rem);
-    border: 1px solid #ffa500;
+    border: var(--clr-btn-border);
     outline: none;
     cursor: pointer;
-    transition: all 0.2s ease-in;
+    transition: all 0.1s ease-in;
 
     &:hover {
       transform: translateY(3px);
-      border: 1px solid #5f5f5f;
-    }
-  }
-}
-
-.hero-content-left-icons {
-  @include flex-config($justify: space-between, $align: center);
-  width: 100%;
-  font-size: clamp(2.5rem, 2vw, 4em);
-  padding: 5rem 1rem;
-
-  @include respond(sm) {
-    padding: 5rem 0;
-  }
-
-  &__icon {
-    &--js {
-      color: #cccc0d;
-    }
-
-    &--ts {
-      position: relative;
-      background: #358ef1;
-      width: 22px;
-      height: 25px;
-      border-radius: 1px;
-
-      @include respond(md) {
-        width: 25px;
-        height: 29px;
-      }
-
-      @include respond(lg) {
-        width: 33px;
-        height: 35px;
-      }
-
-      p {
-        position: absolute;
-        color: #fff;
-        font-size: clamp(1.2rem, 1.5vw, 1.5rem);
-        bottom: 0;
-        right: 0.2rem;
-        font-weight: 700;
-      }
-    }
-
-    &--vue {
-      color: #008000;
-    }
-
-    &--react {
-      color: #438cec;
-    }
-
-    &--html {
-      color: #ffa500;
-    }
-
-    &--css {
-      color: #0000ff;
-    }
-
-    &--sass {
-      color: #e46076;
     }
   }
 }
@@ -166,5 +114,54 @@
 .hero-content-right {
   @include respond(sm) {
     width: 30%;
+  }
+}
+
+.projects {
+  background-color: var(--clr-section-bg);
+  border-top: var(--clr-section-border);
+  padding: 5rem 0;
+
+  @include respond(md) {
+    padding: 10rem 0 40rem 0;
+  }
+
+  &__heading {
+    font-size: var(--fs-section-heading);
+    text-align: center;
+    padding: 2rem 0;
+
+    @include respond(md) {
+      padding: 5rem 0;
+    }
+
+    @include respond(lg) {
+      padding: 10rem 0;
+    }
+  }
+}
+
+.swipers {
+  @include flex-config($direction: column);
+
+  @include respond(sm) {
+    gap: 20rem;
+  }
+
+  @include respond(md) {
+    flex-direction: row;
+    padding: 5rem 0 10rem 0;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+
+  &__heading {
+    width: 100%;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: 400;
   }
 }

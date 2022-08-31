@@ -1,0 +1,16 @@
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.darkmode {
+  --background: var(--background-dark);
+  --foreground: var(--foreground-dark);
+  --clr-nav: var(--clr-nav-dark);
+  --clr-section-bg: var(--clr-section-bg-dark);
+  --clr-wrapper: var(--clr-wrapper-dark);
+  --clr-btn: var(--clr-btn-dark);
+  --clr-btn-border: var(--clr-btn-border-dark);
+  --clr-section-border: var(--clr-section-border-dark);
+  --clr-arrow: var(--clr-arrow-dark);
+}
