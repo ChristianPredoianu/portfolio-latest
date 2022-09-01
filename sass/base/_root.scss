@@ -4,6 +4,8 @@
   --background-dark: #121212;
   --foreground-dark: #d6d5d5;
   --clr-dark-gray: #161616;
+  --clr-light-gray: #e4e4e4;
+  --clr-orange: #ffa500;
   --clr-accent-light: #0673b3;
   --clr-accent-dark: #01253a;
 
@@ -15,12 +17,14 @@
   --clr-wrapper-dark: var(--clr-dark-gray);
   --clr-btn: transparent;
   --clr-btn-dark: var(--clr-accent-light);
-  --clr-btn-border: 1px solid #ffa500;
+  --clr-btn-border: 1px solid var(--clr-orange);
   --clr-btn-border-dark: none;
   --clr-section-border: 1px solid rgb(185, 182, 182);
   --clr-section-border-dark: 1px solid var(--clr-accent-light);
   --clr-arrow: var(--clr-dark-gray);
   --clr-arrow-dark: var(--clr-accent-light);
+  --clr-swiper-shadow: var(--clr-dark-gray);
+  --clr-swiper-shadow-dark: var(--clr-light-gray);
 
   --fs-section-heading: clamp(2.5rem, 2.5vw, 5rem);
 }
