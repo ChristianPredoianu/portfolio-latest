@@ -1,6 +1,5 @@
 const verticalSwiper = new Swiper('.verticalSwiper', {
   direction: 'vertical',
-
   grabCursor: true,
   pagination: {
     el: '.swiper-pagination',
