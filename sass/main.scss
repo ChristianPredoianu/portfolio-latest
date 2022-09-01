@@ -143,9 +143,14 @@
 
 .swipers {
   @include flex-config($direction: column);
+  gap: 10rem;
 
   @include respond(sm) {
     gap: 20rem;
+  }
+
+  @include respond(md) {
+    gap: 0;
   }
 
   @include respond(md) {
