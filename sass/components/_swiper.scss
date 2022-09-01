@@ -1,4 +1,5 @@
 @use '../abstracts/' as *;
+@use '../animations/pulse-animation' as *;
 
 .swiper {
   width: 100%;
@@ -86,9 +87,16 @@
 
 .swiper-slide-cube-content {
   @include flex-config($direction: column);
-  width: 100%;
   height: 100%;
   color: var(--clr-light-gray);
+
+  @include respond(md) {
+    padding: 1rem 0;
+  }
+
+  @include respond(lg) {
+    padding: 2rem 0;
+  }
 
   &__heading {
     font-size: clamp(1.8rem, 2vw, 3rem);
@@ -112,8 +120,10 @@
   }
 
   &__demo-paragraph {
+    display: inline-block;
     color: #7df3f3;
     padding-bottom: 1rem;
+    animation: pulse 2s infinite;
   }
 }
 
@@ -143,11 +153,11 @@
     }
 
     &--4 {
-      background-image: url('../../assets/porsche1.jpg');
+      background-image: url('../../assets/porsche2.jpg');
     }
 
     &--5 {
-      background-image: url('../../assets/porsche2.jpg');
+      background-image: url('../../assets/porsche1.jpg');
     }
   }
 }
