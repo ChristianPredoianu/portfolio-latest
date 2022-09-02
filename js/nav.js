@@ -8,20 +8,20 @@ window.onscroll = () => {
     ? header.classList.add('sticky-nav')
     : header.classList.remove('sticky-nav');
 };
-hamburger.addEventListener('click', toggleNavLinks);
 
 function toggleNavLinks() {
   hamburger.classList.toggle('active');
   navLinks.classList.toggle('active');
 }
 
-navItemLinks.forEach((navItemLink) =>
-  navItemLink.addEventListener('click', closeNavLinks)
-);
-
 function closeNavLinks() {
   hamburger.classList.remove('active');
   navLinks.classList.remove('active');
 }
 
+navItemLinks.forEach((navItemLink) =>
+  navItemLink.addEventListener('click', closeNavLinks)
+);
+
 window.addEventListener('resize', closeNavLinks);
+hamburger.addEventListener('click', toggleNavLinks);
