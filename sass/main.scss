@@ -4,14 +4,8 @@
 @use './layouts/' as *;
 @use './components/' as *;
 
-.swiper-container {
-  width: 300px;
-  height: 300px;
-  margin: 40px auto;
-}
-
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
 
   &__down-arrow {
     width: 100%;
@@ -20,16 +14,11 @@
     text-align: center;
     cursor: pointer;
     display: none !important;
-    transition: all 0.2s ease;
 
     @include respond(sm) {
       display: inline-block !important;
       width: auto;
       text-align: left;
-    }
-
-    &:hover {
-      transform: translateY(5px) scale(0.9);
     }
   }
 }
@@ -103,11 +92,6 @@
     border: var(--clr-btn-border);
     outline: none;
     cursor: pointer;
-    transition: transform 0.1s ease-in;
-
-    &:hover {
-      transform: translateY(3px);
-    }
   }
 }
 
@@ -178,46 +162,4 @@
 
 .about-me {
   @include flex-config($direction: column, $align: center);
-}
-
-.about-me-img-container {
-  margin-top: 10rem;
-  width: 15rem;
-  position: relative;
-  z-index: 30;
-
-  &__img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-  }
-
-  &::before {
-    @include pseudo($top: -50%, $left: -10%);
-    width: 150%;
-    height: 150%;
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 50%;
-    z-index: -1;
-  }
-
-  &::after {
-    @include pseudo($top: -20%, $left: 0);
-    width: 130%;
-    height: 130%;
-    background-image: linear-gradient(
-      to top,
-      #505285 0%,
-      #585e92 12%,
-      #65689f 25%,
-      #7474b0 37%,
-      #7e7ebb 50%,
-      #8389c7 62%,
-      #9795d4 75%,
-      #a2a1dc 87%,
-      #b5aee4 100%
-    );
-    border-radius: 50%;
-    z-index: -1;
-  }
 }
