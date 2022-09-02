@@ -2,33 +2,53 @@ gsap.registerPlugin(CSSRulePlugin);
 
 const imgBefore = CSSRulePlugin.getRule('.about-me-img-container::before');
 const imgAfter = CSSRulePlugin.getRule('.about-me-img-container::after');
+const ctaBtn = document.getElementById('hero-cta-btn');
+const heroDownArrow = document.getElementById('hero-down-arrow');
 
-const tl = gsap.timeline({ defaults: { duration: 0.7 } });
+const isHeroAnimated = localStorage.getItem('isHeroAnimated');
 
-tl.from('.header', {
-  y: -100,
+const hoverCtaBtn = gsap.to(ctaBtn, {
+  y: 5,
+  duration: 0.2,
+  paused: true,
+  ease: 'power1.inOut',
 });
 
-tl.from('.social-media', {
-  x: '100%',
+const hoverHeroDownArrow = gsap.to(heroDownArrow, {
+  scale: 0.9,
+  y: 5,
+  duration: 0.2,
+  paused: true,
 });
 
-tl.from('.hero-content-left-cta__primary-heading', {
-  opacity: 0,
-});
+ctaBtn.addEventListener('mouseenter', () => hoverCtaBtn.play());
+ctaBtn.addEventListener('mouseleave', () => hoverCtaBtn.reverse());
 
-tl.from('.hero-content-left-cta__secondary-heading', {
-  opacity: 0,
-});
+heroDownArrow.addEventListener('mouseenter', () => hoverHeroDownArrow.play());
+heroDownArrow.addEventListener('mouseleave', () =>
+  hoverHeroDownArrow.reverse()
+);
 
-tl.from('.hero-content-left-cta__btn', {
-  y: 20,
-});
+const tl = gsap.timeline({ defaults: { duration: 0.5, ease: 'power2.out' } });
 
-tl.from('.floating-icons__icon', {
-  opacity: 0,
-  stagger: 0.1,
-});
+if (!isHeroAnimated) {
+  tl.from('.header', { y: -100 });
+  tl.from('.social-media', { x: '100%' });
+  tl.from('.hero-content-left-cta__primary-heading', { opacity: 0 });
+  tl.from('.hero-content-left-cta__secondary-heading', { opacity: 0 });
+  tl.from(ctaBtn, { y: 20, opacity: 0 });
+  tl.from('.floating-icons__icon', { opacity: 0, stagger: 0.1 });
+  tl.from(heroDownArrow, { opacity: 0, stagger: 0.1 });
+  tl.from('.verticalSwiper', {
+    y: '100%',
+    opacity: 0,
+    onComplete: setAnimationEndToLocalStorage,
+  });
+}
+
+function setAnimationEndToLocalStorage() {
+  localStorage.setItem('isHeroAnimated', true);
+}
 
 //Hero section floating icons
 tl.to('.floating-icons__icon', {
