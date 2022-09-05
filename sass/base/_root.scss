@@ -1,3 +1,5 @@
+@use '../abstracts/' as *;
+
 :root {
   --background: #fdfdfd;
   --foreground: #202020;
@@ -6,10 +8,20 @@
   --clr-dark-gray: #161616;
   --clr-light-gray: #e4e4e4;
   --clr-orange: #ffa500;
-
+  --clr-orange-dark: #a36a00;
   --clr-accent-light: #0673b3;
   --clr-accent-dark: #01253a;
 
+  //spacings
+  --pd-sections: 5rem 0 10rem 0;
+  --pd-section-heading: 2rem 0;
+
+  //fonts
+  --fs-section-heading: clamp(2.5rem, 2.5vw, 5rem);
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  //light-dark mode
   --clr-nav: transparent;
   --clr-nav-dark: var(--clr-dark-gray);
   --clr-section-bg: #ffffff;
@@ -27,5 +39,14 @@
   --clr-swiper-shadow: var(--clr-dark-gray);
   --clr-swiper-shadow-dark: var(--clr-light-gray);
 
-  --fs-section-heading: clamp(2.5rem, 2.5vw, 5rem);
+  //icons colors
+  --clr-js: #979703;
+  --clr-typescript: #358ef1;
+  --clr-vue: #008000;
+  --clr-react: #588dd1;
+  --clr-html: #ffa500;
+  --clr-css: #0000ff;
+  --clr-sass: #e46076;
+  --clr-linkedin: #0072b1;
+  --clr-mail: #b67d12;
 }
