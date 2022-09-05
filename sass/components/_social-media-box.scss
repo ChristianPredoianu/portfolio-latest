@@ -1,0 +1,21 @@
+@use '../abstracts/' as *;
+
+.social-media {
+  @include flex-config($justify: end, $align: center);
+  font-size: 3rem;
+  padding: 5rem 0;
+  width: 100%;
+
+  &--linkedin {
+    color: var(--clr-linkedin);
+  }
+
+  &--mail {
+    color: var(--clr-mail);
+  }
+}
+
+.social-media-icons-wrapper {
+  background-color: var(--clr-wrapper);
+  padding: 2rem;
+}
