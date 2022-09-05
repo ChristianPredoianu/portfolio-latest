@@ -5,6 +5,7 @@
 @use './components/' as *;
 
 .hero {
+  @include flex-config($align: center);
   min-height: 100vh;
 
   &__down-arrow {
@@ -21,6 +22,10 @@
       text-align: left;
     }
   }
+}
+
+.hero-wrapper {
+  width: 100%;
 }
 
 .presentation {
@@ -197,4 +202,38 @@
   background-color: var(--clr-section-bg);
   border-top: var(--clr-section-border);
   padding: var(--pd-sections);
+  padding-bottom: 20rem;
+}
+
+.footer {
+  background-color: #000000;
+  color: var(--clr-light-gray);
+  padding: 5rem 0;
+}
+
+.footer-wrapper {
+  @include flex-config($direction: column, $align: center);
+}
+
+.footer-headings {
+  &__heading-primary {
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+  }
+
+  &__heading-secondary {
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+  }
+}
+
+.footer-social-media {
+  @include flex-config($justify: space-around);
+  width: 30%;
+  font-size: 1.8rem;
+  margin-top: 3rem;
+
+  @include respond(sm) {
+    width: 10%;
+  }
 }
