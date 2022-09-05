@@ -23,25 +23,6 @@
   }
 }
 
-.social-media {
-  @include flex-config($justify: end, $align: center);
-  font-size: 3rem;
-  padding: 5rem 0;
-
-  &--linkedin {
-    color: #0072b1;
-  }
-
-  &--mail {
-    color: #b67d12;
-  }
-}
-
-.social-media-icons-wrapper {
-  background-color: var(--clr-wrapper);
-  padding: 2rem;
-}
-
 .presentation {
   @include flex-config($direction: column);
 
@@ -80,7 +61,7 @@
   &__secondary-heading {
     font-size: clamp(2rem, 2vw, 3rem);
     margin-top: 0.5rem;
-    font-weight: 400;
+    font-weight: var(--fw-normal);
   }
 
   &__btn {
@@ -100,10 +81,11 @@
     width: 30%;
   }
 }
+
 .section-heading {
   font-size: var(--fs-section-heading);
   text-align: center;
-  padding: 2rem 0;
+  padding: var(--pd-section-heading);
 
   @include respond(md) {
     padding: 5rem 0;
@@ -117,11 +99,7 @@
 .projects-section {
   background-color: var(--clr-section-bg);
   border-top: var(--clr-section-border);
-  padding: 5rem 0 15rem 0;
-
-  @include respond(sm) {
-    padding: 10rem 0 30rem 0;
-  }
+  padding: var(--pd-sections);
 }
 
 .cube-swipers {
@@ -150,16 +128,73 @@
     font-size: clamp(1.5rem, 2vw, 2.5rem);
     margin-bottom: 3rem;
     text-align: center;
-    font-weight: 400;
+    font-weight: var(--fw-normal);
   }
 }
 
 .about-me-section {
   background-color: var(--clr-section-bg);
   border-top: var(--clr-section-border);
-  padding: 5rem 0 15rem 0;
+  padding: var(--pd-sections);
 }
 
 .about-me {
   @include flex-config($direction: column, $align: center);
+}
+
+.about-me-text-wrapper {
+  padding: 5rem 1rem;
+  line-height: 1.5;
+
+  @include respond(sm) {
+    padding: 5rem 0;
+  }
+
+  &__span {
+    font-weight: var(--fw-bold);
+  }
+
+  &__heading {
+    font-size: clamp(2rem, 2vw, 3rem);
+    padding-bottom: 1rem;
+  }
+
+  &__paragraph {
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
+  }
+
+  &__html {
+    color: var(--clr-html);
+  }
+
+  &__css {
+    color: var(--clr-css);
+  }
+
+  &__sass {
+    color: var(--clr-sass);
+  }
+
+  &__js {
+    color: var(--clr-js);
+  }
+
+  &__typescript {
+    color: var(--clr-typescript);
+  }
+
+  &__react {
+    color: var(--clr-react);
+  }
+
+  &__vue {
+    color: var(--clr-vue);
+  }
+}
+
+.contact-me-section {
+  @include flex-config($direction: column, $align: center);
+  background-color: var(--clr-section-bg);
+  border-top: var(--clr-section-border);
+  padding: var(--pd-sections);
 }
