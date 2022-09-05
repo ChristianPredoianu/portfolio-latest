@@ -21,6 +21,7 @@
   </head>
   <body>
     <!-- <div id="app"></div> -->
+
     <!--NAV-->
     <header class="header" id="header">
       <nav class="navbar container">
@@ -58,198 +59,204 @@
     </header>
     <!--NAV END-->
 
+    <div class="scroll-to-top" id="scroll-to-top">
+      <i class="fa-solid fa-arrow-up scroll-to-top__arrow"></i>
+    </div>
+
     <!--HERO SECTION-->
     <section class="hero container">
-      <div class="social-media">
-        <div class="social-media-icons-wrapper">
-          <a
-            href="https://github.com/ChristianPredoianu"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/christian-predoianu-369218157/"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-            ><i class="fa-brands fa-linkedin social-media--linkedin"></i
-          ></a>
-          <a
-            href="mailto:christianpredoianu@yahoo.com"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-            ><i class="fa-solid fa-envelope social-media--mail"></i
-          ></a>
-        </div>
-      </div>
-
-      <div class="presentation">
-        <div class="hero-content-left">
-          <div class="hero-content-left-cta">
-            <h1 class="hero-content-left-cta__primary-heading">
-              Christian Predoianu
-            </h1>
-            <h2 class="hero-content-left-cta__secondary-heading">
-              Front end developer
-            </h2>
-            <button class="hero-content-left-cta__btn" id="hero-cta-btn">
-              Projects
-            </button>
+      <div class="hero-wrapper">
+        <div class="social-media">
+          <div class="social-media-icons-wrapper">
+            <a
+              href="https://github.com/ChristianPredoianu"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/christian-predoianu-369218157/"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin social-media--linkedin"></i
+            ></a>
+            <a
+              href="mailto:christianpredoianu@yahoo.com"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              ><i class="fa-solid fa-envelope social-media--mail"></i
+            ></a>
           </div>
-          <div class="floating-icons">
-            <i
-              class="fa-brands fa-js floating-icons__icon floating-icons__icon--js"
-            ></i>
-            <div class="floating-icons__icon floating-icons__icon--ts">
-              <p>TS</p>
+        </div>
+
+        <div class="presentation">
+          <div class="hero-content-left">
+            <div class="hero-content-left-cta">
+              <h1 class="hero-content-left-cta__primary-heading">
+                Christian Predoianu
+              </h1>
+              <h2 class="hero-content-left-cta__secondary-heading">
+                Front end developer
+              </h2>
+              <button class="hero-content-left-cta__btn" id="hero-cta-btn">
+                Projects
+              </button>
             </div>
-            <i
-              class="fa-brands fa-vuejs floating-icons__icon floating-icons__icon--vue"
-            ></i>
-            <i
-              class="fa-brands fa-react floating-icons__icon floating-icons__icon--react"
-            ></i>
-            <i
-              class="fa-brands fa-html5 floating-icons__icon floating-icons__icon--html"
-            ></i>
-            <i
-              class="fa-brands fa-css3 floating-icons__icon floating-icons__icon--css"
-            ></i>
-            <i
-              class="fa-brands fa-sass floating-icons__icon floating-icons__icon--sass"
-            ></i>
-          </div>
-        </div>
-        <div class="hero-content-right">
-          <!--VERTICAL SWIPER-->
-          <div class="swiper verticalSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  class="swiper-slide__img"
-                  src="./assets/christian-predoianu.png"
-                  alt="Christian Predoianu"
-                />
+            <div class="floating-icons">
+              <i
+                class="fa-brands fa-js floating-icons__icon floating-icons__icon--js"
+              ></i>
+              <div class="floating-icons__icon floating-icons__icon--ts">
+                <p>TS</p>
               </div>
-              <!--SWIPER SLIDE 1-->
-              <div class="swiper-slide">
-                <div class="icons-wrapper">
-                  <div class="icon-wrapper">
-                    <p class="icon-wrapper__icon icon-wrapper__icon--next">
-                      Next
-                    </p>
-                    <p class="icon-wrapper__description">Next.js</p>
-                  </div>
-                  <div class="icon-wrapper">
-                    <p class="icon-wrapper__icon icon-wrapper__icon--nuxt">
-                      Nuxt
-                    </p>
-                    <p class="icon-wrapper__description">Nuxt.js</p>
-                  </div>
-                  <div class="icon-wrapper">
-                    <p class="icon-wrapper__icon icon-wrapper__icon--es6">
-                      ES6
-                    </p>
-                    <p class="icon-wrapper__description">ES6</p>
-                  </div>
-                  <div class="icon-wrapper">
-                    <i
-                      class="fa-brands fa-github icon-wrapper__icon icon-wrapper__icon--github"
-                    ></i>
-                    <p class="icon-wrapper__description">Github</p>
-                  </div>
-                  <div class="icon-wrapper">
-                    <i
-                      class="fa-brands fa-npm icon-wrapper__icon icon-wrapper__icon--npm"
-                    ></i>
-                    <p class="icon-wrapper__description">NPM</p>
-                  </div>
-                </div>
-              </div>
-              <!--SWIPER SLIDE 1 END-->
-
-              <!--SWIPER SLIDE 2-->
-              <div class="swiper-slide">
-                <div class="icons-wrapper">
-                  <div class="icon-wrapper">
-                    <i
-                      class="fa-solid fa-wind icon-wrapper__icon icon-wrapper__icon--tailwind"
-                    ></i>
-                    <p class="icon-wrapper__description">Tailwind</p>
-                  </div>
-                  <div class="icon-wrapper">
-                    <i
-                      class="fa-solid fa-code icon-wrapper__icon icon-wrapper__icon--vscode"
-                    ></i>
-                    <p class="icon-wrapper__description">Vs Code</p>
-                  </div>
-                  <div class="icon-wrapper">
-                    <i
-                      class="fa-solid fa-screwdriver-wrench icon-wrapper__icon icon-wrapper__icon--devtools"
-                    ></i>
-                    <p class="icon-wrapper__description">Dev Tools</p>
-                  </div>
-                  <div class="icon-wrapper">
-                    <i
-                      class="fa-solid fa-mobile icon-wrapper__icon icon-wrapper__icon--responsive"
-                    ></i>
-                    <p class="icon-wrapper__description">Responsive design</p>
-                  </div>
-                  <div class="icon-wrapper">
-                    <i
-                      class="fa-brands fa-bootstrap icon-wrapper__icon icon-wrapper__icon--bootstrap"
-                    ></i>
-                    <p class="icon-wrapper__description">Bootstrap</p>
-                  </div>
-                </div>
-              </div>
-              <!--SWIPER SLIDE 2 END-->
-
-              <!--SWIPER SLIDE 3-->
-              <div class="swiper-slide">
-                <div class="icons-wrapper">
-                  <div class="icon-wrapper">
-                    <p class="icon-wrapper__icon icon-wrapper__icon--bem">
-                      BEM
-                    </p>
-                    <p class="icon-wrapper__description">BEM</p>
-                  </div>
-
-                  <div class="icon-wrapper">
-                    <i
-                      class="fa-brands fa-figma icon-wrapper__icon icon-wrapper__icon--figma"
-                    ></i>
-                    <p class="icon-wrapper__description">Figma</p>
-                  </div>
-                  <div class="icon-wrapper">
-                    <i
-                      class="fa-solid fa-terminal icon-wrapper__icon icon-wrapper__icon--terminal"
-                    ></i>
-                    <p class="icon-wrapper__description">Command Line</p>
-                  </div>
-                  <div class="icon-wrapper">
-                    <i
-                      class="fa-solid fa-bolt icon-wrapper__icon icon-wrapper__icon--performance"
-                    ></i>
-                    <p class="icon-wrapper__description">
-                      Performance optimisation
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!--SWIPER SLIDE 3 END-->
+              <i
+                class="fa-brands fa-vuejs floating-icons__icon floating-icons__icon--vue"
+              ></i>
+              <i
+                class="fa-brands fa-react floating-icons__icon floating-icons__icon--react"
+              ></i>
+              <i
+                class="fa-brands fa-html5 floating-icons__icon floating-icons__icon--html"
+              ></i>
+              <i
+                class="fa-brands fa-css3 floating-icons__icon floating-icons__icon--css"
+              ></i>
+              <i
+                class="fa-brands fa-sass floating-icons__icon floating-icons__icon--sass"
+              ></i>
             </div>
-            <div class="swiper-pagination"></div>
           </div>
-          <!--VERTICAL SWIPER END-->
+          <div class="hero-content-right">
+            <!--VERTICAL SWIPER-->
+            <div class="swiper verticalSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    class="swiper-slide__img"
+                    src="./assets/christian-predoianu.png"
+                    alt="Christian Predoianu"
+                  />
+                </div>
+                <!--SWIPER SLIDE 1-->
+                <div class="swiper-slide">
+                  <div class="icons-wrapper">
+                    <div class="icon-wrapper">
+                      <p class="icon-wrapper__icon icon-wrapper__icon--next">
+                        Next
+                      </p>
+                      <p class="icon-wrapper__description">Next.js</p>
+                    </div>
+                    <div class="icon-wrapper">
+                      <p class="icon-wrapper__icon icon-wrapper__icon--nuxt">
+                        Nuxt
+                      </p>
+                      <p class="icon-wrapper__description">Nuxt.js</p>
+                    </div>
+                    <div class="icon-wrapper">
+                      <p class="icon-wrapper__icon icon-wrapper__icon--es6">
+                        ES6
+                      </p>
+                      <p class="icon-wrapper__description">ES6</p>
+                    </div>
+                    <div class="icon-wrapper">
+                      <i
+                        class="fa-brands fa-github icon-wrapper__icon icon-wrapper__icon--github"
+                      ></i>
+                      <p class="icon-wrapper__description">Github</p>
+                    </div>
+                    <div class="icon-wrapper">
+                      <i
+                        class="fa-brands fa-npm icon-wrapper__icon icon-wrapper__icon--npm"
+                      ></i>
+                      <p class="icon-wrapper__description">NPM</p>
+                    </div>
+                  </div>
+                </div>
+                <!--SWIPER SLIDE 1 END-->
+
+                <!--SWIPER SLIDE 2-->
+                <div class="swiper-slide">
+                  <div class="icons-wrapper">
+                    <div class="icon-wrapper">
+                      <i
+                        class="fa-solid fa-wind icon-wrapper__icon icon-wrapper__icon--tailwind"
+                      ></i>
+                      <p class="icon-wrapper__description">Tailwind</p>
+                    </div>
+                    <div class="icon-wrapper">
+                      <i
+                        class="fa-solid fa-code icon-wrapper__icon icon-wrapper__icon--vscode"
+                      ></i>
+                      <p class="icon-wrapper__description">Vs Code</p>
+                    </div>
+                    <div class="icon-wrapper">
+                      <i
+                        class="fa-solid fa-screwdriver-wrench icon-wrapper__icon icon-wrapper__icon--devtools"
+                      ></i>
+                      <p class="icon-wrapper__description">Dev Tools</p>
+                    </div>
+                    <div class="icon-wrapper">
+                      <i
+                        class="fa-solid fa-mobile icon-wrapper__icon icon-wrapper__icon--responsive"
+                      ></i>
+                      <p class="icon-wrapper__description">Responsive design</p>
+                    </div>
+                    <div class="icon-wrapper">
+                      <i
+                        class="fa-brands fa-bootstrap icon-wrapper__icon icon-wrapper__icon--bootstrap"
+                      ></i>
+                      <p class="icon-wrapper__description">Bootstrap</p>
+                    </div>
+                  </div>
+                </div>
+                <!--SWIPER SLIDE 2 END-->
+
+                <!--SWIPER SLIDE 3-->
+                <div class="swiper-slide">
+                  <div class="icons-wrapper">
+                    <div class="icon-wrapper">
+                      <p class="icon-wrapper__icon icon-wrapper__icon--bem">
+                        BEM
+                      </p>
+                      <p class="icon-wrapper__description">BEM</p>
+                    </div>
+
+                    <div class="icon-wrapper">
+                      <i
+                        class="fa-brands fa-figma icon-wrapper__icon icon-wrapper__icon--figma"
+                      ></i>
+                      <p class="icon-wrapper__description">Figma</p>
+                    </div>
+                    <div class="icon-wrapper">
+                      <i
+                        class="fa-solid fa-terminal icon-wrapper__icon icon-wrapper__icon--terminal"
+                      ></i>
+                      <p class="icon-wrapper__description">Command Line</p>
+                    </div>
+                    <div class="icon-wrapper">
+                      <i
+                        class="fa-solid fa-bolt icon-wrapper__icon icon-wrapper__icon--performance"
+                      ></i>
+                      <p class="icon-wrapper__description">
+                        Performance optimisation
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!--SWIPER SLIDE 3 END-->
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <!--VERTICAL SWIPER END-->
+          </div>
         </div>
+        <a href="#projects"
+          ><i
+            class="fa-solid fa-chevron-down hero__down-arrow"
+            id="hero-down-arrow"
+          ></i
+        ></a>
       </div>
-      <a href="#projects"
-        ><i
-          class="fa-solid fa-chevron-down hero__down-arrow"
-          id="hero-down-arrow"
-        ></i
-      ></a>
     </section>
     <!--HERO SECTION END-->
 
@@ -1014,7 +1021,7 @@
     </section>
     <section class="contact-me-section">
       <h3 class="section-heading">Contact</h3>
-      <div class="contact-card">
+      <div class="contact-card container">
         <img src="./assets/contact.png" alt="phone" class="contact-card__img" />
         <div class="contact-card-info">
           <div class="contact-card-headings">
@@ -1072,6 +1079,37 @@
         </div>
       </div>
     </section>
+    <footer class="footer">
+      <div class="footer-wrapper container">
+        <div class="footer-headings">
+          <p class="footer-headings__heading-primary">Christian Predoianu</p>
+          <p class="footer-headings__heading-secondary">Front end developer</p>
+        </div>
+        <div class="footer-social-media">
+          <a
+            href="https://github.com/ChristianPredoianu"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github footer-social-media__icon"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/christian-predoianu-369218157/"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin footer-social-media__icon"></i
+          ></a>
+          <a
+            href="mailto:christianpredoianu@yahoo.com"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+            ><i class="fa-solid fa-envelope footer-social-media__icon"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <progress max="100" value="0"></progress>
     <script
       src="https://kit.fontawesome.com/ab54ee68f9.js"
       crossorigin="anonymous"
