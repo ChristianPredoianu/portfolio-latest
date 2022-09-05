@@ -1,4 +1,5 @@
 gsap.registerPlugin(CSSRulePlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 const imgBefore = CSSRulePlugin.getRule('.about-me-img-container::before');
 const imgAfter = CSSRulePlugin.getRule('.about-me-img-container::after');
@@ -82,4 +83,10 @@ gsap.to(imgAfter, {
   },
   yoyo: true,
   repeat: -1,
+});
+
+gsap.to('progress', {
+  value: 100,
+  ease: 'none',
+  scrollTrigger: { scrub: 0.3 },
 });
