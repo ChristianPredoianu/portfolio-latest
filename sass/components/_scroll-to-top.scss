@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+
+.scroll-to-top {
+  @include position($pos: fixed, $bottom: 2rem, $right: 2rem);
+  font-size: 2rem;
+  background-color: var(--clr-accent-light);
+  color: var(--clr-light-gray);
+  padding: 1rem;
+
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+}
