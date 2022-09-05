@@ -22,7 +22,7 @@
   <body>
     <!-- <div id="app"></div> -->
     <!--NAV-->
-    <header class="header">
+    <header class="header" id="header">
       <nav class="navbar container">
         <a href="#" class="nav-logo">Christian Predoianu</a>
         <ul class="nav-links" id="nav-links">
@@ -92,7 +92,9 @@
             <h2 class="hero-content-left-cta__secondary-heading">
               Front end developer
             </h2>
-            <button class="hero-content-left-cta__btn">Projects</button>
+            <button class="hero-content-left-cta__btn" id="hero-cta-btn">
+              Projects
+            </button>
           </div>
           <div class="floating-icons">
             <i
@@ -243,7 +245,10 @@
         </div>
       </div>
       <a href="#projects"
-        ><i class="fa-solid fa-chevron-down hero__down-arrow"></i
+        ><i
+          class="fa-solid fa-chevron-down hero__down-arrow"
+          id="hero-down-arrow"
+        ></i
       ></a>
     </section>
     <!--HERO SECTION END-->
@@ -925,13 +930,145 @@
     </section>
     <section class="about-me-section">
       <h3 class="section-heading">About me</h3>
-      <div class="about-me">
+      <div class="about-me container">
         <div class="about-me-img-container">
           <img
             src="./assets/christian.jpg"
             alt="Christian Predoianu from profile"
             class="about-me-img-container__img"
           />
+        </div>
+        <div class="about-me-text-wrapper">
+          <div class="about-me-text-wrapper">
+            <h4 class="about-me-text-wrapper__heading">About</h4>
+            <p class="about-me-text-wrapper__paragraph">
+              I am a self taught front-end developer from Sweden. My main skills
+              are
+              <span
+                class="about-me-text-wrapper__html about-me-text-wrapper__span"
+                >html5</span
+              >,
+              <span
+                class="about-me-text-wrapper__css about-me-text-wrapper__span"
+                >Css3</span
+              >,
+              <span
+                class="about-me-text-wrapper__sass about-me-text-wrapper__span"
+                >Sass</span
+              >,
+              <span
+                class="about-me-text-wrapper__js about-me-text-wrapper__span"
+                >JavaScript</span
+              >,
+              <span
+                class="about-me-text-wrapper__typescript about-me-text-wrapper__span"
+                >TypeScript,
+              </span>
+              <span
+                class="about-me-text-wrapper__react about-me-text-wrapper__span"
+                >React.js</span
+              >
+              and
+              <span
+                class="about-me-text-wrapper__vue about-me-text-wrapper__span"
+                >Vue.js</span
+              >
+              as a framework but I also master Wordpress. When I'm not working
+              on different projects I like to keep my Front-end developer
+              technologies skills up to date and always learn by experimenting
+              with different designs, animations, smaller
+              <span
+                class="about-me-text-wrapper__js about-me-text-wrapper__span"
+                >vanilla JavaScript</span
+              >
+              projects or just try out some JavaScript libraries that may come
+              in handy in future projects. I also speak three fluent languages
+              (Swedish, English and Romanian) and a little bit of French.
+            </p>
+
+            <p class="about-me-text-wrapper__paragraph">
+              I got interested in programming after finishing a course included
+              in my college degree (Development of E-services) which I finished
+              at högskolan Dalarna and decided to write my bachelor's thesis
+              about WCAG 2.0 and accessibility on the web. After graduating from
+              college I decided to start programming and obviously I decided to
+              take the front end developer path.
+            </p>
+
+            <p class="about-me-text-wrapper__paragraph">
+              You can find my bachelor thesis about WCAG 2.0 here. (In swedish)
+            </p>
+            <p class="about-me-text-wrapper__paragraph">
+              Feel free to chck out my
+              <a
+                href="https://github.com/ChristianPredoianu"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              .
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-me-section">
+      <h3 class="section-heading">Contact</h3>
+      <div class="contact-card">
+        <img src="./assets/contact.png" alt="phone" class="contact-card__img" />
+        <div class="contact-card-info">
+          <div class="contact-card-headings">
+            <h5 class="contact-card-headings__primary-heading">
+              Christian Predoianu
+            </h5>
+            <h6 class="contact-card-headings__secondary-heading">
+              Front end developer
+            </h6>
+            <p class="contact-card-headings__paragraph">Find me on</p>
+          </div>
+          <div class="contact-card-social-media">
+            <div class="contact-card-social-media-icon-wrapper">
+              <a
+                href="https://github.com/ChristianPredoianu"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+              >
+                <i
+                  class="fa-brands fa-github contact-card-social-media-icon-wrapper__icon"
+                ></i
+              ></a>
+              <p class="contact-card-social-media-icon-wrapper__username">
+                /ChristianPredoianu
+              </p>
+            </div>
+            <div class="contact-card-social-media-icon-wrapper">
+              <a
+                href="https://www.linkedin.com/in/christian-predoianu-369218157/"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+              >
+                <i
+                  class="fa-brands fa-linkedin contact-card-social-media-icon-wrapper__icon contact-card-social-media-icon-wrapper__icon--linkedin"
+                ></i
+              ></a>
+              <p class="contact-card-social-media-icon-wrapper__username">
+                Christian Predoianu
+              </p>
+            </div>
+            <div class="contact-card-social-media-icon-wrapper">
+              <a
+                href="mailto:christianpredoianu@yahoo.com"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                ><i
+                  class="fa-solid fa-envelope contact-card-social-media-icon-wrapper__icon contact-card-social-media-icon-wrapper__icon--mail"
+                ></i
+              ></a>
+              <p class="contact-card-social-media-icon-wrapper__username">
+                christianpredoianu@yahoo.com
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
