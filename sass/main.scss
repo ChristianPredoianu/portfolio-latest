@@ -4,6 +4,10 @@
 @use './layouts/' as *;
 @use './components/' as *;
 
+body {
+  transition: all 1s ease;
+}
+
 .hero {
   @include flex-config($align: center);
   min-height: 100vh;

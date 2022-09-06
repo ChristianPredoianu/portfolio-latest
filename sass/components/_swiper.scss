@@ -1,5 +1,4 @@
 @use '../abstracts/' as *;
-@use '../animations/pulse-animation' as *;
 
 .swiper {
   width: 100%;
@@ -123,7 +122,6 @@
     display: inline-block;
     color: #7df3f3;
     padding-bottom: 1rem;
-    animation: pulse 2s infinite;
   }
 }
 

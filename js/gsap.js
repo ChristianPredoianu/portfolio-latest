@@ -6,7 +6,7 @@ const imgAfter = CSSRulePlugin.getRule('.about-me-img-container::after');
 const ctaBtn = document.getElementById('hero-cta-btn');
 const heroDownArrow = document.getElementById('hero-down-arrow');
 
-const isHeroAnimated = localStorage.getItem('isHeroAnimated');
+const isHeroAnimated = sessionStorage.getItem('isHeroAnimated');
 
 const hoverCtaBtn = gsap.to(ctaBtn, {
   y: 5,
@@ -43,12 +43,12 @@ if (!isHeroAnimated) {
   tl.from('.verticalSwiper', {
     y: '100%',
     opacity: 0,
-    onComplete: setAnimationEndToLocalStorage,
+    onComplete: setAnimationEndToSessionStorage,
   });
 }
 
-function setAnimationEndToLocalStorage() {
-  localStorage.setItem('isHeroAnimated', true);
+function setAnimationEndToSessionStorage() {
+  sessionStorage.setItem('isHeroAnimated', true);
 }
 
 //Hero section floating icons
@@ -85,8 +85,91 @@ gsap.to(imgAfter, {
   repeat: -1,
 });
 
+//ScrollTrigger
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: '.projects-section',
+      start: 'center center',
+      end: 'bottom top',
+      scrub: true,
+      pin: true,
+      once: true,
+      markers: true,
+    },
+  })
+
+  .from('.swiper2', { y: innerHeight * 1.5 })
+  .from('.swiper3', { y: innerHeight * 1.5 })
+  /* .from('.swiper-cube-shadow', { y: innerHeight }) */
+  .from('.swiper-button-prev', { y: innerHeight * 1.5 })
+  .from('.swiper-button-next', { y: innerHeight * 1.5 })
+  .from('.swiper-slide-cube__overlay', { y: innerHeight })
+  .from('.swiper-slide-cube-content__heading', { y: innerHeight })
+  .from('.swiper-slide-cube-content__link', { y: innerHeight })
+  .from('.swiper-slide-cube-content__secondary-heading', { y: innerHeight })
+  .from('.swiper-slide-cube-content-list', { y: innerHeight })
+  .from('.swiper-slide-cube-content__demo-paragraph', {
+    y: innerHeight,
+  })
+  .from('.swiper-pagination', {
+    y: innerHeight,
+    onComplete: ScrollTrigger.kill,
+  });
+
 gsap.to('progress', {
   value: 100,
   ease: 'none',
   scrollTrigger: { scrub: 0.3 },
 });
+
+/* const cubeSwiperContainers = gsap.utils.toArray('.cube-swiper-container');
+cubeSwiperContainers.forEach((swiper) => {
+  gsap.from(swiper, {
+    scale: 0.5,
+    stagger: 2,
+    scrollTrigger: {
+      trigger: '#projects-heading',
+      start: 'top center',
+      end: 'top 200px',
+      scrub: true,
+      once: true,
+    },
+  });
+}); */
+
+/* gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: '.about-me-section',
+      start: 'top center',
+      end: '+=2000px',
+      scrub: true,
+      once: true,
+      markers: true,
+    },
+  })
+
+  .from('.about-me-img-container', { opacity: 0, rotate: 90 })
+  .from('.about-me-text-wrapper__heading', { opacity: 0, delay: 1 })
+  .from('.about-me-text-wrapper__paragraph', { opacity: 0 })
+  .to('.contact-card__img', { rotate: 6, delay: 5 })
+  .from('.contact-card-headings__primary-heading', { opacity: 0, x: 10 })
+  .from('.contact-card-headings__secondary-heading', { opacity: 0, x: 10 })
+  .from('.contact-card-headings__paragraph', { opacity: 0, y: 100 }); */
+/*  .from('.contact-card-social-media', { opacity: 0 }); */
+/* gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: '.contact-me-section',
+      start: 'top 500px',
+      end: 'bottom bottom',
+      scrub: true,
+      once: true,
+    },
+  })
+
+  .from('.contact-card-headings__primary-heading', { opacity: 0, x: 10 })
+  .from('.contact-card-headings__secondary-heading', { opacity: 0, x: 10 })
+  .from('.contact-card__img', { opacity: 0, rotate: 25 });
+ */

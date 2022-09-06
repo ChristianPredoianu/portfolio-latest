@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Christian Predoianu | Front-end developer</title>
   </head>
-  <body>
+  <body class="body">
     <!-- <div id="app"></div> -->
 
     <!--NAV-->
@@ -261,13 +261,13 @@
     <!--HERO SECTION END-->
 
     <section class="projects-section" id="projects">
-      <h3 class="section-heading">Projects</h3>
+      <h3 class="section-heading" id="projects-heading">Projects</h3>
       <div class="cube-swipers">
         <div class="cube-swiper-container">
           <h4 class="cube-swiper-container__heading">JavaScript Projects</h4>
 
           <!--CUBE SWIPER 1-->
-          <div class="swiper swiper2">
+          <div class="swiper swiper2 cube-swiper">
             <div class="swiper-wrapper swiper-slide-cube swiper-slide-cube-one">
               <!--CUBE SWIPER 1 SLIDE 1-->
               <div
@@ -297,6 +297,7 @@
                     <li class="swiper-slide-cube-content-list__item">
                       Swiper.js
                     </li>
+                    <li class="swiper-slide-cube-content-list__item">GSAP</li>
                   </ul>
                   <a
                     href="https://christianpredoianu.se"
@@ -712,7 +713,7 @@
           <h4 class="cube-swiper-container__heading">HTML/Css Projects</h4>
 
           <!--CUBE SWIPER 2-->
-          <div class="swiper swiper3">
+          <div class="swiper swiper3 cube-swiper">
             <div class="swiper-wrapper swiper-slide-cube swiper-slide-cube-two">
               <div
                 class="swiper-slide swiper-slide-cube-one__slide swiper-slide-cube-two__slide--1"
@@ -935,8 +936,9 @@
         </div>
       </div>
     </section>
+
     <section class="about-me-section">
-      <h3 class="section-heading">About me</h3>
+      <h3 class="section-heading" id="about-me-heading">About me</h3>
       <div class="about-me container">
         <div class="about-me-img-container">
           <img
@@ -1110,6 +1112,7 @@
       </div>
     </footer>
     <progress max="100" value="0"></progress>
+
     <script
       src="https://kit.fontawesome.com/ab54ee68f9.js"
       crossorigin="anonymous"

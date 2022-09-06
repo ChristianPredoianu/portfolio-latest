@@ -1,7 +1,11 @@
 @use '../abstracts/' as *;
 
 .contact-card {
-  @include flex-config($direction: column, $align: center, $justify: center);
+  @include flex-config(
+    $direction: column-reverse,
+    $align: center,
+    $justify: center
+  );
   margin-top: 5rem;
 
   @include respond(sm) {
@@ -11,7 +15,6 @@
   &__img {
     width: 20rem;
     padding-top: 5rem;
-    transform: rotate(6deg);
 
     @include respond(sm) {
       width: 25%;
