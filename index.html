@@ -25,19 +25,19 @@
     <!--NAV-->
     <header class="header" id="header">
       <nav class="navbar container">
-        <a href="#" class="nav-logo">Christian Predoianu</a>
+        <a href="#hero" class="nav-logo">Christian Predoianu</a>
         <ul class="nav-links" id="nav-links">
           <li class="nav-item">
-            <a href="#" class="nav-item__link">Home</a>
+            <a href="#hero" class="nav-item__link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-item__link">Projects</a>
+            <a href="#projects" class="nav-item__link">Projects</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-item__link">About me</a>
+            <a href="#about" class="nav-item__link">About me</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-item__link">Contact</a>
+            <a href="#contact" class="nav-item__link">Contact</a>
           </li>
         </ul>
         <div class="nav-cta">
@@ -64,7 +64,7 @@
     </div>
 
     <!--HERO SECTION-->
-    <section class="hero container">
+    <section class="hero container" id="hero">
       <div class="hero-wrapper">
         <div class="social-media">
           <div class="social-media-icons-wrapper">
@@ -104,9 +104,11 @@
               <h2 class="hero-content-left-cta__secondary-heading">
                 Front end developer
               </h2>
-              <button class="hero-content-left-cta__btn" id="hero-cta-btn">
-                Projects
-              </button>
+              <a href="#projects"
+                ><button class="hero-content-left-cta__btn" id="hero-cta-btn">
+                  Projects
+                </button></a
+              >
             </div>
             <div class="floating-icons">
               <i
@@ -268,6 +270,9 @@
 
     <section class="projects-section" id="projects">
       <h3 class="section-heading" id="projects-heading">Projects</h3>
+      <p class="projects-section__cube-instructions">
+        Scroll down to build the cubes
+      </p>
       <div class="cube-swipers">
         <div class="cube-swiper-container">
           <h4 class="cube-swiper-container__heading">JavaScript Projects</h4>
@@ -943,7 +948,7 @@
       </div>
     </section>
 
-    <section class="about-me-section">
+    <section class="about-me-section" id="about">
       <h3 class="section-heading" id="about-me-heading">About me</h3>
       <div class="about-me container">
         <div class="about-me-img-container">
@@ -1011,15 +1016,21 @@
             </p>
 
             <p class="about-me-text-wrapper__paragraph">
-              You can find my bachelor thesis about WCAG 2.0 here. (In swedish)
-            </p>
-            <p class="about-me-text-wrapper__paragraph">
-              Feel free to chck out my
+              You can find my bachelor thesis about
               <a
                 href="https://github.com/ChristianPredoianu"
                 rel="noopener noreferrer nofollow"
                 target="_blank"
-                ><i class="fa-brands fa-github"></i
+                >WCAG 2.0 here. (In swedish)</a
+              >
+            </p>
+            <p class="about-me-text-wrapper__paragraph">
+              Feel free to check out my
+              <a
+                href="https://github.com/ChristianPredoianu"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                ><i class="fa-brands fa-github about-me-text-wrapper__link"></i
               ></a>
               .
             </p>
@@ -1027,7 +1038,7 @@
         </div>
       </div>
     </section>
-    <section class="contact-me-section">
+    <section class="contact-me-section" id="contact">
       <h3 class="section-heading">Contact</h3>
       <div class="contact-card container">
         <img src="./assets/contact.png" alt="phone" class="contact-card__img" />
