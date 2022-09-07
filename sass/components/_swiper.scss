@@ -31,6 +31,70 @@
   position: relative;
 }
 
+//VERTICAL SWIPER
+.swiper-slide img {
+  object-fit: scale-down;
+  filter: grayscale(40%);
+  border-radius: 7%;
+}
+
+.icons-wrapper {
+  @include flex-config($direction: column);
+  gap: 2rem;
+}
+
+.icon-wrapper {
+  &__icon {
+    font-size: 3rem;
+
+    &--nuxt {
+      color: #008000;
+    }
+
+    &--es6 {
+      color: #cccc0d;
+    }
+
+    &--npm {
+      color: #ff0000;
+    }
+
+    &--tailwind {
+      color: #3492eb;
+    }
+
+    &--vscode {
+      color: rgb(67, 67, 175);
+    }
+
+    &--devtools {
+      color: #c45d18;
+    }
+
+    &--responsive {
+      color: #6de66d;
+    }
+
+    &--bootstrap {
+      color: #6210a5;
+    }
+
+    &--figma {
+      color: #f77e0c;
+    }
+
+    &--performance {
+      color: #a7c51f;
+    }
+  }
+
+  &__description {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+//-----------------------------------------
+
 .swiper-slide-cube {
   &__overlay {
     position: absolute;
@@ -157,44 +221,6 @@
     &--5 {
       background-image: url('../../assets/porsche1.jpg');
     }
-  }
-}
-
-.icons-wrapper {
-  @include flex-config($direction: column);
-  gap: 2rem;
-}
-
-.swiper-slide img {
-  object-fit: scale-down;
-  filter: grayscale(40%);
-  border-radius: 7%;
-}
-
-.icon-wrapper {
-  &__icon {
-    font-size: 3rem;
-
-    &--nuxt {
-      color: #008000;
-    }
-
-    &--es6 {
-      color: #cccc0d;
-    }
-
-    &--npm {
-      color: #ff0000;
-    }
-
-    &--tailwind {
-      color: #3492eb;
-    }
-  }
-
-  &__description {
-    margin-top: 0.5rem;
-    font-size: 1.2rem;
   }
 }
 
