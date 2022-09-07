@@ -1,6 +1,10 @@
 const verticalSwiper = new Swiper('.verticalSwiper', {
   direction: 'vertical',
-  /* grabCursor: true, */
+  grabCursor: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -18,6 +22,7 @@ var cubeSwiper1 = new Swiper('.swiper2', {
   },
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
   navigation: {
     nextEl: '.swiper-button-next',
@@ -36,6 +41,7 @@ var cubeSwiper2 = new Swiper('.swiper3', {
   },
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
   navigation: {
     nextEl: '.swiper-button-next',
