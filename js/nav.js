@@ -1,7 +1,7 @@
 const header = document.getElementById('header');
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
-const navItemLinks = document.querySelectorAll('.nav-item__link');
+const navItemLinks = document.querySelectorAll('.nav-item');
 
 window.addEventListener('scroll', () => {
   scrollY > 10 && window.innerWidth > 640
@@ -20,7 +20,13 @@ function closeNavLinks() {
 }
 
 navItemLinks.forEach((navItemLink) =>
-  navItemLink.addEventListener('click', closeNavLinks)
+  navItemLink.addEventListener('click', function () {
+    closeNavLinks();
+    navItemLinks.forEach((navItemLink) =>
+      navItemLink.classList.remove('active-link')
+    );
+    this.classList.add('active-link');
+  })
 );
 
 window.addEventListener('resize', closeNavLinks);
