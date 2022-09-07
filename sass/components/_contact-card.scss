@@ -69,7 +69,7 @@
   background-color: #413f3f;
   color: var(--clr-light-gray);
   perspective: 100px;
-  box-shadow: rgb(44, 43, 43) 0px 20px 30px -20px;
+  box-shadow: var(--shdw-box);
   transition: 0.2s ease;
 
   @include respond(lg) {
