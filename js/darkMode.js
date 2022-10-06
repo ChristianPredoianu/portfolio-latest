@@ -1,3 +1,5 @@
+import { removeCubeSwiperShadow, addCubeSwiperShadow } from './swiper';
+
 const darkModeCheckbox = document.getElementById('dark-mode-checkbox');
 const darkModeToggler = document.getElementById('dm-toggler');
 const body = document.querySelector('body');
@@ -11,7 +13,14 @@ function setUserPreferedTheme() {
   const isPreferedDarkMode = window.matchMedia(
     '(prefers-color-scheme:dark)'
   ).matches;
-  isPreferedDarkMode ? enableDarkMode() : disableDarkMode();
+
+  if (isPreferedDarkMode) {
+    enableDarkMode();
+    removeCubeSwiperShadow();
+  } else {
+    disableDarkMode();
+    addCubeSwiperShadow();
+  }
 }
 
 function watchPreferedThemeChange() {
@@ -35,11 +44,13 @@ function toggleDarkMode() {
 function enableDarkMode() {
   body.classList.add('darkmode');
   darkModeCheckbox.checked = true;
+  removeCubeSwiperShadow();
 }
 
 function disableDarkMode() {
   body.classList.remove('darkmode');
   darkModeCheckbox.checked = false;
+  addCubeSwiperShadow();
 }
 
 toggleDarkMode();
