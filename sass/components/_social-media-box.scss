@@ -1,9 +1,13 @@
 @use '../abstracts/' as *;
 
 .social-media {
-  @include flex-config($justify: end, $align: center);
-  font-size: 3rem;
-  padding: 5rem 0;
+  display: none;
+
+  @include respond(sm) {
+    @include flex-config($justify: end, $align: center);
+    font-size: 3rem;
+    padding: 5rem 0;
+  }
 }
 
 .social-media-icons-wrapper {
