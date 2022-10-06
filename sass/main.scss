@@ -10,7 +10,6 @@ body {
 }
 
 .hero {
-  @include flex-config($align: center);
   min-height: 100vh;
 
   &__down-arrow {
@@ -24,6 +23,7 @@ body {
     @include respond(sm) {
       display: inline-block !important;
       width: auto;
+      padding: 2rem 0;
       text-align: left;
     }
   }
@@ -35,6 +35,7 @@ body {
 
 .presentation {
   @include flex-config($direction: column);
+  gap: 3rem;
 
   @include respond(sm) {
     @include flex-config(
@@ -42,14 +43,17 @@ body {
       $justify: space-between,
       $align: center
     );
+    gap: 0;
   }
 }
 
 .hero-content-left {
-  @include flex-config($direction: column, $align: center);
+  @include flex-config($direction: column, $align: center, $justify: center);
+  margin-top: 10rem;
 
   @include respond(sm) {
     width: 60%;
+    margin-top: 0;
   }
 
   @include respond(md) {
@@ -117,15 +121,21 @@ body {
   padding: var(--pd-sections);
 
   &__cube-instructions {
-    text-align: center;
-    font-size: 1.5rem;
-    animation: pulse infinite 2s;
+    display: none;
+
+    @include respond(lg) {
+      display: block;
+      text-align: center;
+      font-size: 1.5rem;
+      padding-bottom: 2rem;
+      animation: pulse infinite 2s;
+    }
   }
 }
 
 .cube-swipers {
   @include flex-config($direction: column);
-  gap: 10rem;
+  gap: 15rem;
 
   @include respond(sm) {
     gap: 20rem;
@@ -147,9 +157,13 @@ body {
   &__heading {
     width: 100%;
     font-size: clamp(1.5rem, 2vw, 2.5rem);
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     text-align: center;
     font-weight: var(--fw-normal);
+  }
+
+  @include respond(md) {
+    margin-bottom: 3rem;
   }
 }
 
@@ -164,10 +178,12 @@ body {
 }
 
 .about-me-text-wrapper {
-  padding: 5rem 1rem;
+  margin-top: 5rem;
+  padding: 0 1rem;
   line-height: 1.5;
 
   @include respond(md) {
+    margin-top: 0;
     padding: 5rem 3rem;
   }
 
