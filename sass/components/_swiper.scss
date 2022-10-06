@@ -152,6 +152,7 @@
   @include flex-config($direction: column);
   height: 100%;
   color: var(--clr-light-gray);
+  padding: 0.5rem 0;
 
   @include respond(md) {
     padding: 1rem 0;
@@ -162,7 +163,7 @@
   }
 
   &__heading {
-    font-size: clamp(1.8rem, 2vw, 3rem);
+    font-size: clamp(1.6rem, 2vw, 3rem);
     color: #bba6f7;
     padding: 1rem;
   }
@@ -186,6 +187,7 @@
     display: inline-block;
     color: #7df3f3;
     padding-bottom: 1rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
   }
 }
 
@@ -203,22 +205,26 @@
 .swiper-slide-cube-two {
   &__slide {
     &--1 {
-      background-image: url('../../assets/writer.jpg');
+      background-image: url('../../assets/farm-place.jpg');
     }
 
     &--2 {
-      background-image: url('../../assets/travel.jpg');
+      background-image: url('../../assets/writer.jpg');
     }
 
     &--3 {
-      background-image: url('../../assets/construction.jpg');
+      background-image: url('../../assets/travel.jpg');
     }
 
     &--4 {
-      background-image: url('../../assets/porsche2.jpg');
+      background-image: url('../../assets/construction.jpg');
     }
 
     &--5 {
+      background-image: url('../../assets/porsche2.jpg');
+    }
+
+    &--6 {
       background-image: url('../../assets/porsche1.jpg');
     }
   }
@@ -233,7 +239,7 @@
   }
 
   &::after {
-    font-size: clamp(3rem, 5vw, 5rem) !important;
+    font-size: 3rem;
   }
 }
 
@@ -246,12 +252,12 @@
   }
 
   &::after {
-    font-size: clamp(3rem, 5vw, 5rem) !important;
+    font-size: 3rem !important;
   }
 }
 
 .swiper-pagination-bullets {
-  bottom: -2rem !important;
+  bottom: -4rem !important;
 }
 
 .swiper-pagination-bullet {
