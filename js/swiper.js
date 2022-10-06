@@ -11,7 +11,7 @@ const verticalSwiper = new Swiper('.verticalSwiper', {
   },
 });
 
-var cubeSwiper1 = new Swiper('.swiper2', {
+const cubeSwiper1 = new Swiper('.swiper2', {
   effect: 'cube',
   grabCursor: true,
   cubeEffect: {
@@ -30,7 +30,7 @@ var cubeSwiper1 = new Swiper('.swiper2', {
   },
 });
 
-var cubeSwiper2 = new Swiper('.swiper3', {
+const cubeSwiper2 = new Swiper('.swiper3', {
   effect: 'cube',
   grabCursor: true,
   cubeEffect: {
@@ -48,3 +48,15 @@ var cubeSwiper2 = new Swiper('.swiper3', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+const swiperShadow = document.querySelector('.swiper-cube-shadow');
+
+export function removeCubeSwiperShadow() {
+  swiperShadow.classList.add('swiper-shadow-darkmode');
+}
+
+export function addCubeSwiperShadow() {
+  swiperShadow.classList.remove('swiper-shadow-darkmode');
+}
+
+console.log(swiperShadow.classList);
