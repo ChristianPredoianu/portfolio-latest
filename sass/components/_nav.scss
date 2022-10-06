@@ -45,7 +45,6 @@
       $justify: space-between,
       $align: center
     );
-    height: auto;
   }
 }
 
@@ -58,7 +57,7 @@
 .nav-item {
   position: relative;
   margin: 2.5rem 0;
-  transition: all 0.2s ease;
+  transition: all 0.1s;
   cursor: pointer;
   z-index: 200;
 
@@ -68,12 +67,10 @@
     width: 0;
     z-index: -1;
     border-bottom: 1px solid var(--clr-orange-dark);
-    transition: all 0.2s ease;
+    transition: width 0.2s ease;
   }
 
   &:hover {
-    transform: scale(1.1);
-
     @include respond(sm) {
       &::after {
         width: 100%;

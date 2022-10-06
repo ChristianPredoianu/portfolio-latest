@@ -11,15 +11,16 @@
 }
 
 .social-media-icons-wrapper {
+  @include flex-config($justify: space-around);
   background-color: var(--clr-wrapper);
   padding: 2rem;
+  width: 30%;
+
+  @include respond(md) {
+    width: 20%;
+  }
 
   &__icon {
-    transition: transform 0.2s ease;
-
-    &:hover {
-      transform: scale(1.1);
-    }
     &--linkedin {
       color: var(--clr-linkedin);
     }

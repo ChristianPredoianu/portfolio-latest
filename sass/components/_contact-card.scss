@@ -17,7 +17,6 @@
     padding-top: 5rem;
 
     @include respond(sm) {
-      width: 25%;
       padding-top: 0;
     }
   }
@@ -46,17 +45,17 @@
   }
 
   &__primary-heading {
-    font-size: clamp(2rem, 2vw, 3.5rem);
+    font-size: clamp(2rem, 2vw, 2.5rem);
   }
 
   &__secondary-heading {
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
     font-weight: var(--fw-normal);
     color: var(--clr-orange-dark);
   }
 
   &__paragraph {
-    font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
     margin-top: 2rem;
   }
 }
@@ -70,7 +69,7 @@
   color: var(--clr-light-gray);
   perspective: 100px;
   box-shadow: var(--shdw-box);
-  transition: 0.2s ease;
+  transition: transform 0.1s;
 
   @include respond(lg) {
     transform: rotateY(-25deg);

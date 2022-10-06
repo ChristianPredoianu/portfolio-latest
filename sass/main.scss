@@ -23,7 +23,6 @@ body {
     @include respond(sm) {
       display: inline-block !important;
       width: auto;
-      padding: 2rem 0;
       text-align: left;
     }
   }
@@ -48,10 +47,15 @@ body {
 }
 
 .hero-content-left {
-  @include flex-config($direction: column, $align: center, $justify: center);
-  margin-top: 10rem;
+  @include flex-config(
+    $direction: column-reverse,
+    $align: center,
+    $justify: center
+  );
+  margin-top: 5rem;
 
   @include respond(sm) {
+    flex-direction: column;
     width: 60%;
     margin-top: 0;
   }
@@ -62,10 +66,11 @@ body {
 }
 
 .hero-content-left-cta {
-  padding: 2rem 0;
+  padding: 10rem 0;
 
   @include respond(sm) {
     width: 100%;
+    padding: 2rem 0;
   }
 
   &__primary-heading {
@@ -82,7 +87,7 @@ body {
   &__btn {
     background-color: var(--clr-btn);
     color: var(--foreground);
-    margin-top: 1.5rem;
+    margin-top: 3rem;
     padding: 1rem 2rem;
     font-size: clamp(1.5rem, 2vw, 2.5rem);
     border: var(--clr-btn-border);
@@ -117,7 +122,6 @@ body {
 
 .projects-section {
   background-color: var(--clr-section-bg);
-  border-top: var(--clr-section-border);
   padding: var(--pd-sections);
 
   &__cube-instructions {
@@ -156,8 +160,8 @@ body {
 
   &__heading {
     width: 100%;
-    font-size: clamp(1.5rem, 2vw, 2.5rem);
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
     text-align: center;
     font-weight: var(--fw-normal);
   }
@@ -169,7 +173,6 @@ body {
 
 .about-me-section {
   background-color: var(--clr-section-bg);
-  border-top: var(--clr-section-border);
   padding: var(--pd-sections);
 }
 
@@ -192,12 +195,12 @@ body {
   }
 
   &__heading {
-    font-size: clamp(2rem, 2vw, 3rem);
+    font-size: clamp(2rem, 2vw, 2.5rem);
     padding-bottom: 1rem;
   }
 
   &__paragraph {
-    font-size: clamp(1.8rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 2vw, 2rem);
   }
 
   &__html {
@@ -231,10 +234,10 @@ body {
   &__link {
     font-size: 3rem;
     padding-left: 1rem;
-    transition: transform 0.2s ease;
+    transition: color 0.1s;
 
     &:hover {
-      transform: scale(1.1);
+      color: rgb(179, 179, 184);
     }
   }
 }
@@ -242,13 +245,12 @@ body {
 .contact-me-section {
   @include flex-config($direction: column, $align: center);
   background-color: var(--clr-section-bg);
-  border-top: var(--clr-section-border);
   padding: var(--pd-sections);
   padding-bottom: 20rem;
 }
 
 .footer {
-  background-color: #000000;
+  background-color: hsl(0, 0%, 0%);
   color: var(--clr-light-gray);
   padding: 5rem 0;
 }
@@ -257,23 +259,10 @@ body {
   @include flex-config($direction: column, $align: center);
 }
 
-.footer-headings {
-  &__heading-primary {
-    font-size: 1.5rem;
-    font-weight: var(--fw-bold);
-  }
-
-  &__heading-secondary {
-    font-size: 1.1rem;
-    margin-top: 0.2rem;
-  }
-}
-
 .footer-social-media {
   @include flex-config($justify: space-around);
   width: 30%;
   font-size: 1.8rem;
-  margin-top: 3rem;
 
   @include respond(sm) {
     width: 10%;
