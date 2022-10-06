@@ -1,20 +1,18 @@
 @use '../abstracts/' as *;
 
 :root {
-  --background: #fdfdfd;
-  --foreground: #202020;
-  --background-dark: #121212;
-  --foreground-dark: #d6d5d5;
-  --clr-dark-gray: #161616;
-  --clr-light-gray: #e4e4e4;
-  --clr-orange: #ffa500;
-  --clr-orange-dark: #a36a00;
-  --clr-accent-light: #0673b3;
-  --clr-accent-dark: #01253a;
+  --background: hsl(0, 0%, 99%);
+  --foreground: hsl(0, 0%, 13%);
+  --background-dark: hsl(0, 0%, 7%);
+  --foreground-dark: hsl(0, 1%, 84%);
+  --clr-dark-gray: hsl(0, 0%, 9%);
+  --clr-light-gray: hsl(0, 0%, 89%);
+  --clr-orange: hsl(39, 100%, 50%);
+  --clr-orange-dark: hsl(39, 100%, 32%);
+  --clr-accent-light: hsl(202, 94%, 36%);
+  --clr-accent-dark: hsl(202, 97%, 12%);
 
-  --shdw-text: 2px 3px 3px rgba(0, 0, 0, 0.3),
-    0px -4px 10px rgba(255, 255, 255, 0.3);
-  --shdw-box: rgb(44, 43, 43) 0px 20px 30px -20px;
+  --shdw-box: hsl(0, 1%, 17%) 0px 20px 30px -20px;
 
   //spacings
   --pd-sections: 5rem 0 10rem 0;
@@ -28,7 +26,7 @@
   //light-dark mode
   --clr-nav: transparent;
   --clr-nav-dark: var(--clr-dark-gray);
-  --clr-section-bg: #ffffff;
+  --clr-section-bg: hsl(0, 0%, 100%);
   --clr-section-bg-dark: var(--clr-dark-gray);
   --clr-wrapper: transparent;
   --clr-wrapper-dark: var(--clr-dark-gray);
@@ -36,22 +34,26 @@
   --clr-btn-dark: var(--clr-accent-light);
   --clr-btn-border: 1px solid var(--clr-orange);
   --clr-btn-border-dark: none;
-  --clr-section-border: 1px solid rgb(185, 182, 182);
+  --clr-section-border: 1px solid hsl(0, 2%, 72%);
   --clr-section-border-dark: 1px solid var(--clr-accent-light);
   --clr-arrow: var(--clr-dark-gray);
   --clr-arrow-dark: var(--clr-accent-light);
   --clr-swiper-shadow: var(--clr-dark-gray);
   --clr-swiper-shadow-dark: var(--clr-light-gray);
+  --shdw-text: 2px 3px 3px hsla(0, 0%, 0%, 0.3),
+    0px -4px 10px hsla(0, 0%, 100%, 0.3);
+  --shdw-text-dark: 2px 3px 3px hsla(0, 0%, 0%, 0.3),
+    0px -4px 10px hsla(0, 0%, 11%, 0.3);
   --clr-footer: var(--clr-gray-dark);
 
   //icons colors
-  --clr-js: #979703;
-  --clr-typescript: #358ef1;
-  --clr-vue: #008000;
-  --clr-react: #588dd1;
-  --clr-html: #ffa500;
-  --clr-css: #0000ff;
-  --clr-sass: #e46076;
-  --clr-linkedin: #0072b1;
-  --clr-mail: #b67d12;
+  --clr-js: hsl(60, 96%, 30%);
+  --clr-typescript: hsl(212, 87%, 58%);
+  --clr-vue: hsl(120, 100%, 25%);
+  --clr-react: hsl(214, 57%, 58%);
+  --clr-html: hsl(39, 100%, 50%);
+  --clr-css: hsl(240, 100%, 50%);
+  --clr-sass: hsl(350, 71%, 64%);
+  --clr-linkedin: hsl(201, 100%, 35%);
+  --clr-mail: hsl(39, 82%, 39%);
 }
