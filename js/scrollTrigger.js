@@ -1,7 +1,7 @@
 const mMedia = gsap.matchMedia();
 
-//Run cube constructor animation on screens >1024px
-mMedia.add('(min-width: 1024px)', () => {
+//Run cube constructor animation on screens >1280px
+mMedia.add('(min-width: 1280px)', () => {
   gsap
     .timeline({
       scrollTrigger: {
