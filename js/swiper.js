@@ -49,14 +49,16 @@ const cubeSwiper2 = new Swiper('.swiper3', {
   },
 });
 
-const swiperShadow = document.querySelector('.swiper-cube-shadow');
+const swiperShadows = document.querySelectorAll('.swiper-cube-shadow');
 
 export function removeCubeSwiperShadow() {
-  swiperShadow.classList.add('swiper-shadow-darkmode');
+  swiperShadows.forEach((swiperShadow) => {
+    swiperShadow.classList.add('swiper-shadow-darkmode');
+  });
 }
 
 export function addCubeSwiperShadow() {
-  swiperShadow.classList.remove('swiper-shadow-darkmode');
+  swiperShadows.forEach((swiperShadow) => {
+    swiperShadow.classList.remove('swiper-shadow-darkmode');
+  });
 }
-
-console.log(swiperShadow.classList);
