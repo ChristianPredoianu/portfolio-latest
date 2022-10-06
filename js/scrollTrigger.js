@@ -8,7 +8,7 @@ mMedia.add('(min-width: 1280px)', () => {
         trigger: '.projects-section',
         start: 'center center',
         end: '+=2000px',
-        scrub: true,
+        scrub: 3,
         pin: true,
       },
     })
@@ -41,8 +41,8 @@ gsap
     scrollTrigger: {
       trigger: '.contact-me-section',
       start: 'top 400px',
-      end: 'bottom bottom',
-      scrub: true,
+      end: 'bottom 1000px',
+      scrub: 3,
     },
   })
 
