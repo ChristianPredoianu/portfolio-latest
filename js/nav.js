@@ -22,10 +22,13 @@ function closeNavLinks() {
 navItemLinks.forEach((navItemLink) =>
   navItemLink.addEventListener('click', function () {
     closeNavLinks();
-    navItemLinks.forEach((navItemLink) =>
-      navItemLink.classList.remove('active-link')
-    );
-    this.classList.add('active-link');
+
+    if (window.innerWidth > 640) {
+      navItemLinks.forEach((navItemLink) =>
+        navItemLink.classList.remove('active-link')
+      );
+      this.classList.add('active-link');
+    }
   })
 );
 
