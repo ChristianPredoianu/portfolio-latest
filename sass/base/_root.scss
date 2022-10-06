@@ -12,8 +12,6 @@
   --clr-accent-light: hsl(202, 94%, 36%);
   --clr-accent-dark: hsl(202, 97%, 12%);
 
-  --shdw-box: hsl(0, 1%, 17%) 0px 20px 30px -20px;
-
   //spacings
   --pd-sections: 5rem 0 10rem 0;
   --pd-section-heading: 2rem 0;
@@ -34,16 +32,15 @@
   --clr-btn-dark: var(--clr-accent-light);
   --clr-btn-border: 1px solid var(--clr-orange);
   --clr-btn-border-dark: none;
-  --clr-section-border: 1px solid hsl(0, 2%, 72%);
-  --clr-section-border-dark: 1px solid var(--clr-accent-light);
   --clr-arrow: var(--clr-dark-gray);
   --clr-arrow-dark: var(--clr-accent-light);
   --clr-swiper-shadow: var(--clr-dark-gray);
   --clr-swiper-shadow-dark: var(--clr-light-gray);
+  --shdw-box: hsl(0, 1%, 17%) 0px 20px 30px -20px;
+  --shdw-box-dark: none;
   --shdw-text: 2px 3px 3px hsla(0, 0%, 0%, 0.3),
     0px -4px 10px hsla(0, 0%, 100%, 0.3);
-  --shdw-text-dark: 2px 3px 3px hsla(0, 0%, 0%, 0.3),
-    0px -4px 10px hsla(0, 0%, 11%, 0.3);
+  --shdw-text-dark: none;
   --clr-footer: var(--clr-gray-dark);
 
   //icons colors
