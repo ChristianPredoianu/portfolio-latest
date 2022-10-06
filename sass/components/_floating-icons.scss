@@ -6,8 +6,8 @@
   font-size: clamp(2.5rem, 2.5vw, 4em);
   padding: 5rem 1rem;
 
-  @include respond(sm) {
-    padding: 5rem 0;
+  @include respond(md) {
+    padding: 10rem 0 5rem 0;
   }
 
   &__icon {
