@@ -1,25 +1,20 @@
-# react-vite-ts-demo-store
+# Portfolio
 
  <!-- PROJECT LOGO -->   
 <br />
 <p align="center">
-  <a href="https://github.com/ChristianPredoianu/react-vite-ts-demo-store">
-    <img src="src/assets/logo.png" alt="Logo" width="300" height="160">
+  <a href="https://github.com/ChristianPredoianu/portfolio-latest">
+    <img src="/assets/portfolio.jpg" alt="Logo" width="300" height="200">
   </a> 
 
-  <h3 align="center">Demo store - Shop Drip</h3>
+  <h3 align="center">Portfolio</h3>
    
   <p align="center">
-   Demo store - Shop Drip
+    <a href="https://github.com/ChristianPredoianu/portfolio-latest"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://github.com/ChristianPredoianu/react-vite-ts-demo-store"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://react-ts-vite-store.netlify.app/shop">View Demo</a>
+    <a href="https://christianpredoianu.se">View Demo</a>
     ·
-    <a href="https://github.com/ChristianPredoianu/react-vite-ts-demo-store/issues">Report Bug</a>
-    ·  
-   
+    <a href="https://github.com/ChristianPredoianu/portfolio-latest/issues">Report Bug</a>
   </p>
 </p>
 
@@ -54,21 +49,18 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A demo version of an online shop.
+My frontend portfolio showcasing info about me and projects built by me.
 
 ### Built With
 
-* [React.js](https://reactjs.org/)
-* [React router v6](https://reactrouter.com/)
-* [Vite](https://vitejs.dev/)
 * [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
 * [Css3](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [TypeScript](https://www.typescriptlang.org/)
 * [Sass](https://sass-lang.com/)
+* [Vanilla js](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [Vite](https://vitejs.dev/)
 * [GSAP](https://greensock.com/gsap/)
 * [Swiper.js](https://swiperjs.com/)
-* [Classnames](https://jedwatson.github.io/classnames/)
-* [React Hook Form](https://react-hook-form.com/)
+
 
 
 <!-- GETTING STARTED -->
@@ -87,7 +79,7 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/ChristianPredoianu/react-vite-ts-demo-store
+   git clone https://github.com/ChristianPredoianu/portfolio-latest.git
    ```
 2. Install NPM packages
    ```sh
@@ -103,24 +95,12 @@ To get a local copy up and running follow these simple steps.
    
    ```
 
-   
-
-   
-   
-   
-   
-   
+  
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-
-
-Navigate around the website, user can select a category of products to view, navigate through products with the help of a pagination
-, see more info about a specific product, search product,  add product to cart, delete product from cart, change amount of a specific product, see total amount, 
-fill in a form that uses form validation to validate the form given specific rules. 
-
- 
-
+The website uses the user system preference for setting dark mode - light mode. If the user changes it's systems theme the changes will be made in real time 
+also for the website. The user can toggle between light mode - dark mode. The site uses scrolltrigger to build the projects swipers. Scroll down to build the cubes.
 
 <!-- LICENSE -->
 ## License
@@ -133,7 +113,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Christian Predoianu - [@linkedin](https://se.linkedin.com/in/christian-predoianu-369218157) - christianpredoianu@yahoo.com
 
-Project Link: [https://github.com/ChristianPredoianu/react-vite-ts-demo-store](https://github.com/ChristianPredoianu/react-vite-ts-demo-store)
+Project Link: [https://github.com/ChristianPredoianu/portfolio-latest](https://github.com/ChristianPredoianu/portfolio-latest)
 
 
 
@@ -141,5 +121,5 @@ Project Link: [https://github.com/ChristianPredoianu/react-vite-ts-demo-store](h
 ## Acknowledgements
 * [Google Fonts](https://fonts.google.com/)
 * [Font-Awesome](https://fontawesome.com/)
-* [Fake Store API](https://fakestoreapi.com/)
+
 
