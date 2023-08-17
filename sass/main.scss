@@ -78,13 +78,17 @@ body {
     background-color: var(--clr-btn);
     color: var(--foreground);
     margin-top: 3rem;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 4rem;
     font-size: clamp(1.5rem, 2vw, 2.5rem);
-    border: var(--clr-btn-border);
-    outline: none;
+    border: 1px solid transparent;
     box-shadow: var(--shdw-btn-cta);
     letter-spacing: 0.1rem;
+    border-radius: 0.5rem;
     cursor: pointer;
+
+    &:focus {
+      border: var(--clr-btn-border);
+    }
   }
 }
 
