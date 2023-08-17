@@ -48,43 +48,43 @@
     font-size: 3rem;
 
     &--nuxt {
-      color: #008000;
+      color: hsl(120, 100%, 25%);
     }
 
     &--es6 {
-      color: #cccc0d;
+      color: hsl(60, 88%, 43%);
     }
 
     &--npm {
-      color: #ff0000;
+      color: hsl(0, 100%, 50%);
     }
 
     &--tailwind {
-      color: #3492eb;
+      color: hsl(209, 82%, 56%);
     }
 
     &--vscode {
-      color: rgb(67, 67, 175);
+      color: hsl(240, 45%, 47%);
     }
 
     &--devtools {
-      color: #c45d18;
+      color: hsl(24, 78%, 43%);
     }
 
     &--responsive {
-      color: #6de66d;
+      color: hsl(120, 71%, 66%);
     }
 
     &--bootstrap {
-      color: #6210a5;
+      color: hsl(273, 82%, 35%);
     }
 
     &--figma {
-      color: #f77e0c;
+      color: hsl(29, 94%, 51%);
     }
 
     &--performance {
-      color: #a7c51f;
+      color: hsl(71, 73%, 45%);
     }
   }
 
@@ -99,7 +99,7 @@
   &__overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: hsla(0, 0%, 0%, 0.7);
     z-index: -1;
   }
 }
@@ -164,13 +164,13 @@
 
   &__heading {
     font-size: clamp(1.6rem, 2vw, 3rem);
-    color: #bba6f7;
+    color: hsl(256, 84%, 81%);
     padding: 1rem;
   }
 
   &__link {
     font-size: clamp(2rem, 2.5vw, 4rem);
-    color: #7df3f3;
+    color: hsl(180, 83%, 72%);
 
     @include respond(sm) {
       padding: 1rem;
@@ -180,12 +180,12 @@
   &__secondary-heading {
     font-size: clamp(1.5rem, 2vw, 2rem);
     padding: 1rem;
-    color: rgb(129, 179, 245);
+    color: hsl(214, 85%, 73%);
   }
 
   &__demo-paragraph {
     display: inline-block;
-    color: #7df3f3;
+    color: hsl(180, 83%, 72%);
     padding-bottom: 1rem;
     font-size: clamp(1.5rem, 2vw, 2rem);
   }
