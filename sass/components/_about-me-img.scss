@@ -1,15 +1,20 @@
 @use '../abstracts/' as *;
 
 .about-me-img-container {
+  position: relative;
   margin-top: 10rem;
   width: 15rem;
-  position: relative;
   z-index: 30;
+
+  @include respond(md) {
+    width: 20rem;
+  }
 
   &__img {
     max-width: 100%;
     height: auto;
     border-radius: 50%;
+    filter: grayscale(80%);
   }
 
   &::before {
