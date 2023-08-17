@@ -13,16 +13,14 @@ body {
   min-height: 100vh;
 
   &__down-arrow {
-    width: 100%;
-    font-size: 5rem;
-    color: var(--clr-arrow);
-    text-align: center;
-    cursor: pointer;
     display: none !important;
 
     @include respond(sm) {
       display: inline-block !important;
       width: auto;
+      font-size: 5rem;
+      color: var(--clr-arrow);
+      cursor: pointer;
       text-align: left;
     }
   }
@@ -37,21 +35,13 @@ body {
   gap: 3rem;
 
   @include respond(sm) {
-    @include flex-config(
-      $direction: row,
-      $justify: space-between,
-      $align: center
-    );
+    @include flex-config($direction: row, $justify: space-between, $align: center);
     gap: 0;
   }
 }
 
 .hero-content-left {
-  @include flex-config(
-    $direction: column-reverse,
-    $align: center,
-    $justify: center
-  );
+  @include flex-config($direction: column-reverse, $align: center, $justify: center);
   margin-top: 5rem;
 
   @include respond(sm) {
@@ -88,13 +78,12 @@ body {
     background-color: var(--clr-btn);
     color: var(--foreground);
     margin-top: 3rem;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     font-size: clamp(1.5rem, 2vw, 2.5rem);
     border: var(--clr-btn-border);
     outline: none;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-      rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-      rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    box-shadow: var(--shdw-btn-cta);
+    letter-spacing: 0.1rem;
     cursor: pointer;
   }
 }
@@ -247,24 +236,4 @@ body {
   background-color: var(--clr-section-bg);
   padding: var(--pd-sections);
   padding-bottom: 20rem;
-}
-
-.footer {
-  background-color: hsl(0, 0%, 0%);
-  color: var(--clr-light-gray);
-  padding: 5rem 0;
-}
-
-.footer-wrapper {
-  @include flex-config($direction: column, $align: center);
-}
-
-.footer-social-media {
-  @include flex-config($justify: space-around);
-  width: 30%;
-  font-size: 1.8rem;
-
-  @include respond(sm) {
-    width: 10%;
-  }
 }
