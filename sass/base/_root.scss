@@ -12,6 +12,11 @@
   --clr-accent-light: hsl(202, 94%, 36%);
   --clr-accent-dark: hsl(202, 97%, 12%);
 
+  --shdw-btn-cta: hsla(0, 0%, 0%, 0.07) 0px 1px 2px,
+    hsla(0, 0%, 0%, 0.07) 0px 2px 4px, hsla(0, 0%, 0%, 0.07) 0px 4px 8px,
+    hsla(0, 0%, 0%, 0.07) 0px 8px 16px, hsla(0, 0%, 0%, 0.07) 0px 16px 32px,
+    hsla(0, 0%, 0%, 0.07) 0px 32px 64px;
+
   //spacings
   --pd-sections: 5rem 0 10rem 0;
   --pd-section-heading: 2rem 0;
