@@ -1,6 +1,7 @@
 export const cubeSwiper1 = new Swiper('.swiper2', {
   effect: 'cube',
   grabCursor: true,
+  speed: 800,
   cubeEffect: {
     shadow: true,
     slideShadows: true,
@@ -20,6 +21,7 @@ export const cubeSwiper1 = new Swiper('.swiper2', {
 export const cubeSwiper2 = new Swiper('.swiper3', {
   effect: 'cube',
   grabCursor: true,
+  speed: 800,
   cubeEffect: {
     shadow: true,
     slideShadows: true,
