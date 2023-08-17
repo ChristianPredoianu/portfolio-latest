@@ -1,0 +1,21 @@
+@use '../abstracts/' as *;
+
+.footer {
+  background-color: hsl(0, 0%, 0%);
+  color: var(--clr-light-gray);
+  padding: 5rem 0;
+}
+
+.footer-wrapper {
+  @include flex-config($direction: column, $align: center);
+}
+
+.footer-social-media {
+  @include flex-config($justify: space-around);
+  width: 30%;
+  font-size: 1.8rem;
+
+  @include respond(sm) {
+    width: 10%;
+  }
+}
