@@ -1,11 +1,7 @@
 @use '../abstracts/' as *;
 
 .contact-card {
-  @include flex-config(
-    $direction: column-reverse,
-    $align: center,
-    $justify: center
-  );
+  @include flex-config($direction: column-reverse, $align: center, $justify: center);
   margin-top: 5rem;
 
   @include respond(sm) {
@@ -38,6 +34,7 @@
 
   @include respond(lg) {
     transform: rotateY(-25deg);
+    cursor: pointer;
 
     &:hover {
       transform: rotateY(0deg);
@@ -73,6 +70,7 @@
 
   @include respond(lg) {
     transform: rotateY(-25deg);
+    cursor: pointer;
 
     &:hover {
       transform: rotateY(0deg);
