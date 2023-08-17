@@ -1,6 +1,7 @@
 const mMedia = gsap.matchMedia();
 
 export default () => {
+  //Run cube constructor animation on screens >1280px
   mMedia.add('(min-width: 1280px)', () => {
     gsap
       .timeline({
@@ -9,6 +10,7 @@ export default () => {
           start: 'center center',
           end: '+=2000px',
           scrub: 3,
+          markers: true,
           pin: true,
         },
       })
@@ -55,4 +57,3 @@ export default () => {
     })
     .from('.contact-card-headings__paragraph', { y: 10, opacity: 0 });
 };
-//Run cube constructor animation on screens >1280px
