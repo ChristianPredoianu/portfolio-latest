@@ -49,5 +49,3 @@ export function addCubeSwiperShadow() {
     swiperShadow.classList.remove('swiper-shadow-darkmode');
   });
 }
-
-console.log('dsa');
