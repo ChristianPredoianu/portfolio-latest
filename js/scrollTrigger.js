@@ -10,7 +10,6 @@ export default () => {
           start: 'center center',
           end: '+=2000px',
           scrub: 3,
-          markers: true,
           pin: true,
         },
       })
