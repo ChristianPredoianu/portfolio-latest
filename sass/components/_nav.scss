@@ -14,11 +14,6 @@
 .navbar {
   @include flex-config($justify: space-between, $align: center);
   width: 100%;
-  padding: 0 2rem;
-
-  @include respond(sm) {
-    padding: 0;
-  }
 }
 
 .nav-logo {
@@ -40,11 +35,7 @@
     width: 50%;
     height: auto;
 
-    @include flex-config(
-      $direction: row,
-      $justify: space-between,
-      $align: center
-    );
+    @include flex-config($direction: row, $justify: space-between, $align: center);
   }
 }
 
