@@ -25,7 +25,7 @@
   @include flex-config($direction: column, $justify: center);
   @include position($pos: fixed, $top: 0, $left: -100%);
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   text-align: center;
   transition: 0.3s;
   z-index: 100;
@@ -96,7 +96,7 @@
 }
 
 .hamburger {
-  position: relative;
+  @include position($pos: fixed, $top: 3rem, $right: 2rem);
   z-index: 110;
   cursor: pointer;
 
