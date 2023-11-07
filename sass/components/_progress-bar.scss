@@ -8,7 +8,7 @@ progress {
   height: 12px;
   border: none;
   background: transparent;
-  z-index: 100;
+  z-index: 50;
 }
 
 progress::-webkit-progress-bar {
@@ -16,19 +16,11 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background: linear-gradient(
-    to right,
-    var(--clr-accent-light),
-    var(--clr-accent-dark)
-  );
+  background: linear-gradient(to right, var(--clr-accent-light), var(--clr-accent-dark));
   background-attachment: fixed;
 }
 
 progress::-moz-progress-bar {
-  background: linear-gradient(
-    to right,
-    var(--clr-accent-light),
-    var(--clr-accent-dark)
-  );
+  background: linear-gradient(to right, var(--clr-accent-light), var(--clr-accent-dark));
   background-attachment: fixed;
 }
