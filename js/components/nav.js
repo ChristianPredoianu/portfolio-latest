@@ -47,9 +47,7 @@ export default () => {
     })
   );
 
-  window.addEventListener('scroll', () => {
-    handleStickyNav();
-  });
+  window.addEventListener('scroll', handleStickyNav);
   window.addEventListener('resize', closeNavLinks);
   hamburger.addEventListener('click', toggleNavLinks);
 };
