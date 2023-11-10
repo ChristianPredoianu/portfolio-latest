@@ -24,7 +24,7 @@
   @include position($pos: absolute, $top: 2.5px, $left: 1px);
   width: 1.7rem;
   height: 1.5rem;
-  background-color: #ffffff;
+  background-color: hsl(0, 0%, 100%);
   border-radius: 50%;
   transition: transform 0.2s linear;
   cursor: pointer;
@@ -36,9 +36,9 @@
 }
 
 .fa-moon {
-  color: #f0ac1a;
+  color: hsl(41, 88%, 52%);
 }
 
 .fa-sun {
-  color: #ececec;
+  color: hsl(0, 0%, 93%);
 }
