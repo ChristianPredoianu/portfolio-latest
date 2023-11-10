@@ -10,8 +10,6 @@ body {
 }
 
 .hero {
-  min-height: 100vh;
-
   &__down-arrow {
     display: none !important;
 
@@ -75,6 +73,8 @@ body {
   }
 
   &__btn {
+    position: relative;
+    z-index: 5;
     background-color: var(--clr-btn);
     color: var(--foreground);
     margin-top: 3rem;
