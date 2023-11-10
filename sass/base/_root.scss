@@ -10,12 +10,11 @@
   --clr-orange: hsl(39, 100%, 50%);
   --clr-orange-dark: hsl(39, 100%, 32%);
   --clr-accent-light: hsl(202, 94%, 36%);
-  --clr-accent-dark: hsl(202, 97%, 12%);
+  --clr-accent-dark: black /* hsl(202, 97%, 12%) */;
 
-  --shdw-btn-cta: hsla(0, 0%, 0%, 0.07) 0px 1px 2px,
-    hsla(0, 0%, 0%, 0.07) 0px 2px 4px, hsla(0, 0%, 0%, 0.07) 0px 4px 8px,
-    hsla(0, 0%, 0%, 0.07) 0px 8px 16px, hsla(0, 0%, 0%, 0.07) 0px 16px 32px,
-    hsla(0, 0%, 0%, 0.07) 0px 32px 64px;
+  --shdw-btn-cta: hsla(0, 0%, 0%, 0.07) 0px 1px 2px, hsla(0, 0%, 0%, 0.07) 0px 2px 4px,
+    hsla(0, 0%, 0%, 0.07) 0px 4px 8px, hsla(0, 0%, 0%, 0.07) 0px 8px 16px,
+    hsla(0, 0%, 0%, 0.07) 0px 16px 32px, hsla(0, 0%, 0%, 0.07) 0px 32px 64px;
 
   //spacings
   --pd-sections: 5rem 0 10rem 0;
@@ -43,8 +42,7 @@
   --clr-swiper-shadow-dark: var(--clr-light-gray);
   --shdw-box: hsl(0, 1%, 17%) 0px 20px 30px -20px;
   --shdw-box-dark: none;
-  --shdw-text: 2px 3px 3px hsla(0, 0%, 0%, 0.3),
-    0px -4px 10px hsla(0, 0%, 100%, 0.3);
+  --shdw-text: 2px 3px 3px hsla(0, 0%, 0%, 0.3), 0px -4px 10px hsla(0, 0%, 100%, 0.3);
   --shdw-text-dark: none;
   --clr-footer: var(--clr-gray-dark);
 
