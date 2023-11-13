@@ -26,7 +26,7 @@ export default () => {
   function toggleNavLinks() {
     hamburger.classList.toggle('active');
     navLinks.classList.toggle('active');
-    /* handleHamburgerColor(); */
+    handleHamburgerColor();
   }
 
   function closeNavLinks() {
@@ -47,7 +47,7 @@ export default () => {
     })
   );
 
-  /* window.addEventListener('scroll', handleStickyNav); */
+  window.addEventListener('scroll', handleStickyNav);
   window.addEventListener('resize', closeNavLinks);
   hamburger.addEventListener('click', toggleNavLinks);
 };
