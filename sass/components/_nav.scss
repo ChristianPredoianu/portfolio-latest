@@ -1,8 +1,6 @@
 @use '../abstracts/' as *;
 
 .header {
-  position: relative;
-  z-index: 200;
   @include flex-config($justify: space-between, $align: center);
   min-height: 10vh;
   background-color: var(--clr-nav);
@@ -25,14 +23,8 @@
 }
 
 .nav-links {
-  @include position($pos: fixed);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: -100%;
+  @include position($pos: fixed, $top: 0, $right: 0, $bottom: 0, $left: -100%);
   @include flex-config($direction: column, $justify: center, $align: center);
-  background-color: red;
-  color: hsl(0, 0%, 85%);
   width: 100%;
   z-index: 100;
   min-height: 100vh;
@@ -40,11 +32,12 @@
   @include respond(sm) {
     position: initial;
     width: 50%;
-    height: auto;
+    min-height: auto;
     @include flex-config($direction: row, $justify: space-between, $align: center);
   }
 
   &.active {
+    background-color: var(--clr-nav-mobile);
     left: 0;
   }
 }
@@ -54,13 +47,11 @@
   margin: 2.5rem 0;
   transition: all 0.1s;
   cursor: pointer;
-  /*  z-index: 200; */
 
   &::after {
     @include position($pos: absolute, $bottom: -1rem, $left: 0);
     content: '';
     width: 0;
-    /*  z-index: -1; */
     border-bottom: 1px solid var(--clr-orange-dark);
     transition: width 0.2s ease;
   }
@@ -131,7 +122,6 @@
 .sticky-nav {
   @include position($pos: fixed, $top: 0);
   width: 100%;
+  background-color: hsla(0, 0%, 17%, 0.8);
   color: var(--clr-light-gray);
-  background-color: rgba(44, 44, 44, 0.8);
-  /*  z-index: 50; */
 }
