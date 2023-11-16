@@ -11,6 +11,8 @@
   }
 
   &__icon {
+    visibility: hidden;
+
     &--js {
       color: var(--clr-js);
     }

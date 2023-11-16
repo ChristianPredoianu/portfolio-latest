@@ -2,6 +2,7 @@
 
 .social-media {
   display: none;
+  visibility: hidden;
 
   @include respond(sm) {
     @include flex-config($justify: end, $align: center);
