@@ -70,7 +70,7 @@
 
   @include respond(lg) {
     transform: rotateY(-25deg);
-    cursor: pointer;
+    /*  cursor: pointer; */
 
     &:hover {
       transform: rotateY(0deg);
