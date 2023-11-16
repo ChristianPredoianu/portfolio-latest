@@ -1,8 +1,9 @@
 import { removeCubeSwiperShadow, addCubeSwiperShadow } from './components/cubeSwiper';
 
+const body = document.querySelector('body');
 const darkModeCheckbox = document.getElementById('dark-mode-checkbox');
 const darkModeToggler = document.getElementById('dm-toggler');
-const body = document.querySelector('body');
+const heroCtaBtn = document.getElementById('hero-cta-btn');
 
 export function setUserPreferedTheme() {
   const isPreferedDarkMode = window.matchMedia('(prefers-color-scheme:dark)').matches;
@@ -10,6 +11,7 @@ export function setUserPreferedTheme() {
   if (isPreferedDarkMode) {
     enableDarkMode();
     removeCubeSwiperShadow();
+    heroCtaBtn.classList.remove('box-shadow');
   } else {
     disableDarkMode();
     addCubeSwiperShadow();
