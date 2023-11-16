@@ -46,8 +46,27 @@ export default () => {
     });
   }
 
+  if (isHeroAnimated) showAnimatedHeroElements();
+
   function setAnimationEndToSessionStorage() {
     sessionStorage.setItem('isHeroAnimated', true);
+  }
+
+  function showAnimatedHeroElements() {
+    const floatingIcons = document.querySelectorAll('.floating-icons__icon');
+
+    document.querySelector('.header').style.visibility = 'visible';
+    document.querySelector('.social-media').style.visibility = 'visible';
+    document.querySelector('.hero-content-left-cta__primary-heading').style.visibility =
+      'visible';
+    document.querySelector('.hero-content-left-cta__secondary-heading').style.visibility =
+      'visible';
+    ctaBtn.style.display = 'visible';
+    heroDownArrow.style.display = 'visible';
+    floatingIcons.forEach((floatingIcon) => {
+      floatingIcon.style.visibility = 'visible';
+    });
+    document.querySelector('.verticalSwiper').style.visibility = 'visible';
   }
 
   //Hero section floating icons
