@@ -47,7 +47,7 @@ export default () => {
   }
 
   function setAnimationEndToSessionStorage() {
-    /* sessionStorage.setItem('isHeroAnimated', true); */
+    sessionStorage.setItem('isHeroAnimated', true);
   }
 
   //Hero section floating icons
