@@ -27,9 +27,7 @@ export default () => {
   ctaBtn.addEventListener('mouseleave', () => hoverCtaBtn.reverse());
 
   heroDownArrow.addEventListener('mouseenter', () => hoverHeroDownArrow.play());
-  heroDownArrow.addEventListener('mouseleave', () =>
-    hoverHeroDownArrow.reverse()
-  );
+  heroDownArrow.addEventListener('mouseleave', () => hoverHeroDownArrow.reverse());
 
   const tl = gsap.timeline({ defaults: { duration: 0.5, ease: 'power2.out' } });
 
@@ -80,7 +78,7 @@ export default () => {
     cssRule: {
       x: -10,
       y: 10,
-      opacity: 0.4,
+      opacity: 0.1,
     },
     yoyo: true,
     repeat: -1,
