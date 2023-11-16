@@ -11,10 +11,12 @@
   }
 
   &__img {
+    position: relative;
     max-width: 100%;
     height: auto;
     border-radius: 50%;
     filter: grayscale(80%);
+    z-index: 400;
   }
 
   &::before {
@@ -23,11 +25,10 @@
     height: 150%;
     background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 50%;
-    /* z-index: -1; */
   }
 
   &::after {
-    @include pseudo($top: -20%, $left: 0);
+    @include pseudo($top: -20%, $left: -1%);
     width: 130%;
     height: 130%;
     background-image: linear-gradient(
