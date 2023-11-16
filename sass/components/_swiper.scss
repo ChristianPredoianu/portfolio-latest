@@ -32,6 +32,10 @@
 }
 
 //VERTICAL SWIPER
+.verticalSwiper {
+  visibility: hidden;
+}
+
 .swiper-slide img {
   object-fit: scale-down;
   filter: grayscale(40%);
