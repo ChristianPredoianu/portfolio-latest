@@ -28,8 +28,8 @@
   @include position($pos: fixed, $top: 0, $right: 0, $bottom: 0, $left: -100%);
   @include flex-config($direction: column, $justify: center, $align: center);
   width: 100%;
-  z-index: 100;
   min-height: 100vh;
+  z-index: 100;
 
   @include respond(sm) {
     position: initial;
@@ -114,11 +114,11 @@
 
   &__bar {
     display: block;
+    background-color: var(--clr-accent-light);
     width: 2.5rem;
     height: 0.3rem;
     margin: 0.5rem auto;
     transition: all 0.3s ease-in-out;
-    background-color: var(--clr-accent-light);
   }
 }
 
