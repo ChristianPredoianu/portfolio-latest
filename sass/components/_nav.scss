@@ -79,11 +79,13 @@
 }
 
 .active-link {
-  &::after {
-    @include position($pos: absolute, $bottom: -1rem, $left: 0);
-    content: '';
-    border-bottom: 1px solid var(--clr-accent-light);
-    width: 100%;
+  @include respond(sm) {
+    &::after {
+      @include position($pos: absolute, $bottom: -1rem, $left: 0);
+      content: '';
+      border-bottom: 1px solid var(--clr-accent-light);
+      width: 100%;
+    }
   }
 }
 
