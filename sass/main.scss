@@ -10,6 +10,8 @@ body {
 }
 
 .hero {
+  min-height: 100vh;
+
   &__down-arrow {
     display: none !important;
 
@@ -81,7 +83,6 @@ body {
     padding: 1.5rem 4rem;
     font-size: clamp(1.5rem, 2vw, 2.5rem);
     border: 1px solid transparent;
-    box-shadow: var(--shdw-btn-cta);
     letter-spacing: 0.1rem;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -90,6 +91,10 @@ body {
       border: var(--clr-btn-border);
     }
   }
+}
+
+.box-shadow {
+  box-shadow: var(--shdw-btn-cta);
 }
 
 .hero-content-right {
