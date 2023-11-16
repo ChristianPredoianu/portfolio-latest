@@ -32,22 +32,22 @@ export default () => {
   const tl = gsap.timeline({ defaults: { duration: 0.5, ease: 'power2.out' } });
 
   if (!isHeroAnimated) {
-    tl.from('.header', { y: -100 });
-    tl.from('.social-media', { x: '100%' });
-    tl.from('.hero-content-left-cta__primary-heading', { opacity: 0 });
-    tl.from('.hero-content-left-cta__secondary-heading', { opacity: 0 });
-    tl.from(ctaBtn, { y: 20, opacity: 0 });
-    tl.from('.floating-icons__icon', { opacity: 0, stagger: 0.1 });
-    tl.from(heroDownArrow, { opacity: 0, stagger: 0.1 });
+    tl.from('.header', { y: -100, autoAlpha: 0 });
+    tl.from('.social-media', { x: '100%', autoAlpha: 0 });
+    tl.from('.hero-content-left-cta__primary-heading', { autoAlpha: 0 });
+    tl.from('.hero-content-left-cta__secondary-heading', { autoAlpha: 0 });
+    tl.from(ctaBtn, { y: 20, autoAlpha: 0 });
+    tl.from('.floating-icons__icon', { autoAlpha: 0, stagger: 0.1 });
+    tl.from(heroDownArrow, { autoAlpha: 0, stagger: 0.1 });
     tl.from('.verticalSwiper', {
       y: '100%',
-      opacity: 0,
+      autoAlpha: 0,
       onComplete: setAnimationEndToSessionStorage,
     });
   }
 
   function setAnimationEndToSessionStorage() {
-    sessionStorage.setItem('isHeroAnimated', true);
+    /* sessionStorage.setItem('isHeroAnimated', true); */
   }
 
   //Hero section floating icons
