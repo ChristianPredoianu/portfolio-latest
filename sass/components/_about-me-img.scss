@@ -2,8 +2,8 @@
 
 .about-me-img-container {
   position: relative;
-  margin-top: 10rem;
   width: 15rem;
+  margin-top: 10rem;
   z-index: 30;
 
   @include respond(md) {
@@ -15,15 +15,19 @@
     max-width: 100%;
     height: auto;
     border-radius: 50%;
-    filter: grayscale(80%);
     z-index: 400;
+    filter: grayscale(80%);
   }
 
   &::before {
     @include pseudo($top: -50%, $left: -10%);
     width: 150%;
     height: 150%;
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image: linear-gradient(
+      135deg,
+      hsl(229, 76%, 66%) 0%,
+      hsl(270, 37%, 46%) 100%
+    );
     border-radius: 50%;
   }
 
@@ -33,17 +37,16 @@
     height: 130%;
     background-image: linear-gradient(
       to top,
-      #505285 0%,
-      #585e92 12%,
-      #65689f 25%,
-      #7474b0 37%,
-      #7e7ebb 50%,
-      #8389c7 62%,
-      #9795d4 75%,
-      #a2a1dc 87%,
-      #b5aee4 100%
+      hsl(238, 25%, 42%) 0%,
+      hsl(234, 25%, 46%) 12%,
+      hsl(237, 23%, 51%) 25%,
+      hsl(240, 28%, 57%) 37%,
+      hsl(240, 31%, 61%) 50%,
+      hsl(235, 38%, 65%) 62%,
+      hsl(242, 42%, 71%) 75%,
+      hsl(241, 46%, 75%) 87%,
+      hsl(248, 50%, 79%) 100%
     );
     border-radius: 50%;
-    /* z-index: -1; */
   }
 }
