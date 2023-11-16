@@ -70,6 +70,10 @@
     font-size: 1.6rem;
     transition: all 0.6s linear;
     color: var(--clr-light-gray);
+
+    @include respond(sm) {
+      color: var(--clr-dark-gray);
+    }
   }
 }
 
