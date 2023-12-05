@@ -1,4 +1,5 @@
 const header = document.getElementById('header');
+const hamburger = document.getElementById('hamburger');
 const hamburgerBars = document.querySelectorAll('span.hamburger__bar ');
 const navLinks = document.getElementById('nav-links');
 const navItemLinks = document.querySelectorAll('.nav-item__link');
@@ -6,20 +7,14 @@ const navLogo = document.querySelector('.nav-logo');
 
 export function handleStickyNav() {
   handleStickyNavColor();
-  return scrollY > 10 && window.innerWidth > 640
+  return scrollY > 50 && window.innerWidth > 640
     ? header.classList.add('sticky-nav')
     : header.classList.remove('sticky-nav');
 }
 
-function handleActiveLink() {
-  if (header.classList.contains('sticky-nav')) {
-    navItemLinks.forEach((navItemLink) => {
-      navItemLink.style.color = 'var(--clr-light-gray)';
-    });
-  }
-}
-
 function handleStickyNavColor() {
+  console.log(header.classList.contains('sticky-nav'));
+  console.log(window.scrollY === 0);
   if (header.classList.contains('sticky-nav')) {
     navLogo.style.color = 'var(--clr-light-gray)';
 
@@ -27,10 +22,10 @@ function handleStickyNavColor() {
       navItemLink.style.color = 'var(--clr-light-gray)';
     });
   } else {
-    navLogo.style.color = '';
+    navLogo.removeAttribute('style');
 
     navItemLinks.forEach((navItemLink) => {
-      navItemLink.style.color = '';
+      navItemLink.removeAttribute('style');
     });
   }
 }
