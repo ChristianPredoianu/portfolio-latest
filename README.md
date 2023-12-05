@@ -4,7 +4,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/ChristianPredoianu/portfolio-latest">
-    <img src="/assets/portfolio.jpg" alt="Logo" width="300" height="200">
+    <img src="/assets/christian.jpg" alt="Logo" width="300" height="200">
   </a> 
 
   <h3 align="center">Portfolio</h3>
