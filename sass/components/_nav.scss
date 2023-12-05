@@ -130,7 +130,7 @@
 }
 
 .sticky-nav {
-  @include position($pos: fixed, $top: 0);
+  @include position($pos: sticky, $top: 0);
   width: 100%;
   background-color: hsla(0, 0%, 17%, 0.8);
 }
