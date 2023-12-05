@@ -24,13 +24,7 @@
   }
 }
 
-@mixin position(
-  $pos,
-  $top: false,
-  $right: false,
-  $bottom: false,
-  $left: false
-) {
+@mixin position($pos, $top: false, $right: false, $bottom: false, $left: false) {
   position: $pos;
 
   @if $top != false {
