@@ -99,7 +99,7 @@
 }
 
 .hamburger {
-  @include position($pos: fixed, $top: 3rem, $right: 2rem);
+  @include position($pos: fixed, $top: 2rem, $right: 2rem);
   z-index: 110;
   cursor: pointer;
 
