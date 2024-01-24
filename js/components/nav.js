@@ -7,15 +7,13 @@ const navLogo = document.querySelector('.nav-logo');
 
 export function handleStickyNav() {
   handleStickyNavColor();
-  return scrollY > 50 && window.innerWidth > 640
+  return window.scrollY > 50 && window.innerWidth > 640
     ? header.classList.add('sticky-nav')
     : header.classList.remove('sticky-nav');
 }
 
 function handleStickyNavColor() {
-  console.log(header.classList.contains('sticky-nav'));
-  console.log(window.scrollY === 0);
-  if (header.classList.contains('sticky-nav')) {
+  if (window.scrollY) {
     navLogo.style.color = 'var(--clr-light-gray)';
 
     navItemLinks.forEach((navItemLink) => {
