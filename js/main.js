@@ -12,9 +12,14 @@ import scrollTrigger from './scrollTrigger';
 const navItemLinks = document.querySelectorAll('.nav-item');
 const scrollToTopIcon = document.getElementById('scroll-to-top');
 
-toggleDarkMode();
-gsap();
-scrollTrigger();
+try {
+  toggleDarkMode();
+  gsap();
+  scrollTrigger();
+} catch (error) {
+  console.error('Initialization error:', error);
+  // Fallback UI if needed
+}
 
 window.addEventListener('load', () => {
   setUserPreferedTheme();
@@ -45,5 +50,10 @@ scrollToTopIcon.addEventListener('click', () => {
   });
 });
 
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(closeNavLinks, 250);
+});
+
 window.addEventListener('scroll', handleStickyNav);
-window.addEventListener('resize', closeNavLinks);
