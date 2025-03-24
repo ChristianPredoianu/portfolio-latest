@@ -110,50 +110,54 @@
 .swiper-slide-cube-one {
   &__slide {
     &--1 {
-      background-image: url('/portfolio.jpg');
+      background-image: url('/glovo.jpg');
     }
 
     &--2 {
-      background-image: url('/explore.jpg');
+      background-image: url('/portfolio.jpg');
     }
 
     &--3 {
-      background-image: url('/mixing.jpg');
+      background-image: url('/explore.jpg');
     }
 
     &--4 {
-      background-image: url('/food.jpg');
+      background-image: url('/mixing.jpg');
     }
 
     &--5 {
-      background-image: url('/shop.jpg');
+      background-image: url('/food.jpg');
     }
 
     &--6 {
-      background-image: url('/music-player.jpg');
+      background-image: url('/shop.jpg');
     }
 
     &--7 {
-      background-image: url('/space-station.jpg');
+      background-image: url('/music-player.jpg');
     }
 
     &--8 {
-      background-image: url('/crypto.jpg');
+      background-image: url('/space-station.jpg');
     }
 
     &--9 {
-      background-image: url('/netflix.jpg');
+      background-image: url('/crypto.jpg');
     }
 
     &--10 {
-      background-image: url('/weather-app.jpg');
+      background-image: url('/netflix.jpg');
     }
 
     &--11 {
-      background-image: url('/restaurant.jpg');
+      background-image: url('/weather-app.jpg');
     }
 
     &--12 {
+      background-image: url('/restaurant.jpg');
+    }
+
+    &--13 {
       background-image: url('/quiz.jpg');
     }
   }
