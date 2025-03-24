@@ -40,5 +40,10 @@ window.addEventListener('scroll', () => {
   }, 100);
 });
 
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(closeNavLinks, 250);
+});
+
 window.addEventListener('scroll', handleStickyNav);
-window.addEventListener('resize', closeNavLinks);
