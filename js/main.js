@@ -4,8 +4,6 @@ import {
   watchPreferedThemeChange,
 } from './darkMode';
 import { handleStickyNav, closeNavLinks } from './components/nav';
-import { verticalSwiper } from './components/verticalSwiper';
-import { cubeSwiper1, cubeSwiper2 } from './components/cubeSwiper';
 import gsap from './gsap';
 import scrollTrigger from './scrollTrigger';
 
