@@ -10,9 +10,13 @@ import scrollTrigger from './scrollTrigger';
 const navItemLinks = document.querySelectorAll('.nav-item');
 const scrollToTopIcon = document.getElementById('scroll-to-top');
 
-toggleDarkMode();
-gsap();
-scrollTrigger();
+try {
+  toggleDarkMode();
+  gsap();
+  scrollTrigger();
+} catch {
+  console.error('Initialization error:', error);
+}
 
 window.addEventListener('load', () => {
   setUserPreferedTheme();
