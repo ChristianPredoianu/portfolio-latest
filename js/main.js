@@ -4,19 +4,17 @@ import {
   watchPreferedThemeChange,
 } from './darkMode';
 import { handleStickyNav, closeNavLinks } from './components/nav';
+import { verticalSwiper } from './components/verticalSwiper';
+import { cubeSwiper1, cubeSwiper2 } from './components/cubeSwiper';
 import gsap from './gsap';
 import scrollTrigger from './scrollTrigger';
 
 const navItemLinks = document.querySelectorAll('.nav-item');
 const scrollToTopIcon = document.getElementById('scroll-to-top');
 
-try {
-  toggleDarkMode();
-  gsap();
-  scrollTrigger();
-} catch {
-  console.error('Initialization error:', error);
-}
+toggleDarkMode();
+gsap();
+scrollTrigger();
 
 window.addEventListener('load', () => {
   setUserPreferedTheme();
@@ -29,25 +27,23 @@ navItemLinks.forEach((navItemLink) =>
 
     if (window.innerWidth > 640) {
       navItemLinks.forEach((navItemLink) => navItemLink.classList.remove('active-link'));
-      navItemLink.classList.add('active-link');
+      this.classList.add('active-link');
     }
   })
 );
 
-let isScrolling;
 window.addEventListener('scroll', () => {
-  clearTimeout(isScrolling);
-  isScrolling = setTimeout(() => {
-    handleStickyNav();
-
-    scrollToTopIcon.style.display = window.scrollY > 1000 ? 'block' : 'none';
-  }, 100);
+  scrollY > 1000
+    ? (scrollToTopIcon.style.display = 'block')
+    : (scrollToTopIcon.style.display = 'none');
 });
 
-let resizeTimeout;
-window.addEventListener('resize', () => {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(closeNavLinks, 250);
+scrollToTopIcon.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
 });
 
 window.addEventListener('scroll', handleStickyNav);
+window.addEventListener('resize', closeNavLinks);
