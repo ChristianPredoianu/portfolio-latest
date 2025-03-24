@@ -20,27 +20,24 @@ window.addEventListener('load', () => {
 });
 
 navItemLinks.forEach((navItemLink) =>
-  navItemLink.addEventListener('click', function () {
+  navItemLink.addEventListener('click', () => {
     closeNavLinks();
 
     if (window.innerWidth > 640) {
       navItemLinks.forEach((navItemLink) => navItemLink.classList.remove('active-link'));
-      this.classList.add('active-link');
+      navItemLink.classList.add('active-link');
     }
   })
 );
 
+let isScrolling;
 window.addEventListener('scroll', () => {
-  scrollY > 1000
-    ? (scrollToTopIcon.style.display = 'block')
-    : (scrollToTopIcon.style.display = 'none');
-});
+  clearTimeout(isScrolling);
+  isScrolling = setTimeout(() => {
+    handleStickyNav();
 
-scrollToTopIcon.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
+    scrollToTopIcon.style.display = window.scrollY > 1000 ? 'block' : 'none';
+  }, 100);
 });
 
 window.addEventListener('scroll', handleStickyNav);
